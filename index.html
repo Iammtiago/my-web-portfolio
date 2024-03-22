@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiago Rodriguez</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header-nav">
+      <nav id="navbar">
+        <!-- <div class="img-perfil">
+          <img src="./src/Tiagxd.jpg" alt="perfil" />
+        </div> -->
+        <ul class="menu">
+          <li class="item-nav ancla"><a href="#sobremi">Sobre mí</a></li>
+          <li class="item-nav ancla"><a href="#proyectos">Proyectos</a></li>
+          <li class="item-nav ancla">
+            <a href="#habilidades">Habilidades</a>
+          </li>
+          <li class="item-nav ancla"><a href="#social">Social</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="img-container">
+      <div class="img-photo">
+        <img id="photo" src="./src/Tiagxd_2.jpg" alt="perfil" />
+        <!-- <img src="./src/Tiagxd.jpg" alt="perfil" /> -->
+      </div>
+    </div>
+
+    <section id="sobremi">
+      <div class="container">
+        <div class="title">
+          <i class="fa-solid fa-code"></i>
+          <h1>Santiago Rodriguez</h1>
+        </div>
+        <div class="context">
+          <p>
+            Soy un desarrollador full-stack con más de dos años de experiencia,
+            apasionado por el diseño web y la programación, especializándome con
+            éxito en el front-end mientras mantengo una sólida comprensión del
+            back-end. Mi enfoque se centra en crear experiencias de usuario
+            excepcionales y funcionales.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <div class="container">
+        <div class="title">
+          <i class="fa-regular fa-star"></i>
+          <!-- <i class="fa-regular fa-address-book"></i> -->
+          <!-- <i class="fa-regular fa-address-card"></i> -->
+          <h1>Proyectos</h1>
+        </div>
+        <div class="all-projects">
+          <div class="project blank-button">
+            <a target="_blank" href="https://shopi-phi.vercel.app" hidden></a>
+            <div class="context">
+              <div class="img-container">
+                <a
+                  class="link"
+                  target="_blank"
+                  href="https://shopi-phi.vercel.app"
+                >
+                  <img src="src/shopi-vercel.png" alt="shopi tienda" />
+                </a>
+              </div>
+
+              <div class="info blank-button">
+                <a href="https://shopi-phi.vercel.app" hidden></a>
+                <div class="content-title-p">
+                  <h2 class="project-title">Shopi</h2>
+                  <p class="detail-text">
+                    Shopi es una plataforma E-Commerce (tienda online), permite
+                    ver, agregar, eliminar productos al carrito, permite ver con
+                    detalles el producto seleccionado, tiene para buscar un
+                    producto por categoria o/y nombre. tiene para ver todas las
+                    compras hechas, con un formato dia/mes/año. tiene un simple
+                    inicio de seccion y un registro
+                  </p>
+                </div>
+                <div class="desarrollo-with">
+                  <a class="link" href="https://react.dev/" target="_blank">
+                    <div class="image-box">
+                      <img src="./src/logos-svg/react-js-logo.svg" alt="" />
+                    </div>
+                    <!-- <i class="fa-brands fa-react" style="color: #61dbfb"></i> -->
+                    <span>React</span>
+                  </a>
+                  <a class="link" href="https://vitejs.dev/" target="_blank">
+                    <div class="image-box">
+                      <img src="./src/logos-svg/vite-js-logo.svg" alt="" />
+                    </div>
+                    <span>Vite</span>
+                  </a>
+
+                  <a
+                    class="link"
+                    href="https://tailwindcss.com/"
+                    target="_blank"
+                  >
+                    <div class="image-box">
+                      <img src="./src/logos-svg/tailwind-logo.svg" alt="" />
+                    </div>
+                    <span>Tailwind</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project blank-button">
+            <a target="_blank" href="#" hidden></a>
+
+            <div class="context">
+              <div class="img-container">
+                <a class="link" href="#" target="_blank">
+                  <img src="src/programaYa.png" alt="programaYa!" />
+                </a>
+              </div>
+
+              <div class="info blank-button">
+                <a target="_blank" href="#" hidden></a>
+                <div class="content-title-p">
+                  <h2 class="project-title">ProgramaYa!</h2>
+                  <p class="detail-text">
+                    programaYa! es una plataforma web 100% responsive design,
+                    que permite a los usuarios ver paginas con cursos gratis
+                    sobre programacion de aplicaciones moviles o desarrollo de
+                    paginas web.
+                  </p>
+                </div>
+                <div class="desarrollo-with">
+                  <a
+                    class="link"
+                    href="https://en.wikipedia.org/wiki/HTML"
+                    target="_blank"
+                  >
+                    <div class="image-box">
+                      <img
+                        class="img-html-css"
+                        src="./src/logos-svg/html-logo.svg"
+                        alt="HTML5"
+                      />
+                    </div>
+                    <span>HTML5</span>
+                  </a>
+                  <a
+                    class="link"
+                    href="https://en.wikipedia.org/wiki/CSS"
+                    target="_blank"
+                  >
+                    <div class="image-box">
+                      <img
+                        class="img-html-css"
+                        src="./src/logos-svg/css-logo.svg"
+                        alt="CSS3"
+                      />
+                    </div>
+                    <span>CSS3</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project blank-button">
+            <a href="https://login-page-indol-six.vercel.app/" hidden
+              >LogIn - SignUp</a
+            >
+
+            <div class="context">
+              <div class="img-container">
+                <a
+                  class="link"
+                  href="https://login-page-indol-six.vercel.app/"
+                  target="_blank"
+                >
+                  <img src="src/login-signup.png" alt="login-signup" />
+                </a>
+              </div>
+
+              <div class="info blank-button">
+                <a
+                  target="_blank"
+                  href="https://login-page-indol-six.vercel.app/"
+                  hidden
+                ></a>
+                <div class="content-title-p">
+                  <h2 class="project-title">pagina de inicio de seccion</h2>
+                  <p class="detail-text">
+                    un inicio de seccion moderno y minimalista diseñado para ser
+                    utilizado en cualquier dispositivo, desde tablets hasta
+                    computadoras portátiles.
+                  </p>
+                </div>
+                <div class="desarrollo-with">
+                  <a
+                    class="link"
+                    href="https://en.wikipedia.org/wiki/HTML"
+                    target="_blank"
+                  >
+                    <div class="image-box">
+                      <img
+                        class="img-html-css"
+                        src="./src/logos-svg/html-logo.svg"
+                        alt="HTML5"
+                      />
+                    </div>
+                    <span>HTML5</span>
+                  </a>
+                  <a
+                    class="link"
+                    href="https://en.wikipedia.org/wiki/CSS"
+                    target="_blank"
+                  >
+                    <div class="image-box">
+                      <img
+                        class="img-html-css"
+                        src="./src/logos-svg/css-logo.svg"
+                        alt="CSS3"
+                      />
+                    </div>
+                    <span>CSS3</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- modelo de proyect v.1 -->
+        <!-- <div class="all-proyects">
+          <div class="context">
+            <h2 class="project-title">Shopi</h2>
+            <p class="details">
+              Shopi es una plataforma E-Commerce (tienda online), permite ver,
+              agregar, eliminar productos al carrito, permite ver con detalles
+              el producto seleccionado, tiene para buscar un producto por
+              categoria o/y nombre. tiene para ver todas las compras hechas, con
+              un formato dia/mes/año. tiene un simple inicio de seccion y un
+              registro
+            </p>
+
+            <div class="desarrollo-with">
+              <div class="blank-button">
+                <a
+                  class="link"
+                  href="https://react.dev/"
+                  target="_blank"
+                  hidden
+                ></a>
+                <img src="./src/logos-svg/react-js-logo.svg" alt="" />
+                <span>React</span>
+              </div>
+
+              <div class="blank-button">
+                <a
+                  class="link"
+                  href="https://vitejs.dev/"
+                  target="_blank"
+                  hidden
+                ></a>
+                <img src="./src/logos-svg/vite-js-logo.svg" alt="" />
+                <span>Vite</span>
+              </div>
+
+              <div class="blank-button">
+                <a
+                  class="link"
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  hidden
+                ></a>
+
+                <img src="./src/logos-svg/tailwind-logo.svg" alt="" />
+                <span>TailwindCSS</span>
+              </div>
+            </div>
+
+            <div class="img-container">
+              <div class="blank-button">
+                <a
+                  class="link"
+                  target="_blank"
+                  href="https://shopi-phi.vercel.app"
+                  hidden
+                >
+                </a>
+                <img src="src/shopi-vercel.png" alt="shopi tienda" />
+                <div class="efect"></div>
+              </div>
+            </div>
+
+            <div class="container-button">
+              <button>
+                <a target="_blank" href="https://shopi-phi.vercel.app">Shopi</a>
+              </button>
+            </div>
+          </div>
+          <div class="context">
+            <h2 class="project-title">ProgramaYa!</h2>
+            <p class="details">
+              programaYa! es una plataforma web 100% responsive design, que
+              permite a los usuarios ver paginas con cursos gratis sobre
+              programacion de aplicaciones moviles o desarrollo de paginas web.
+            </p>
+            <div class="desarrollo-with">
+              <div>
+                <a
+                  class="link"
+                  href="https://en.wikipedia.org/wiki/HTML"
+                  target="_blank"
+                  hidden
+                ></a>
+                <img src="./src/logos-svg/html-logo.svg" alt="HTML5" />
+                <span>HTML5</span>
+              </div>
+              <div>
+                <a
+                  class="link"
+                  href="https://en.wikipedia.org/wiki/CSS"
+                  target="_blank"
+                  hidden
+                ></a>
+                <img src="./src/logos-svg/css-logo.svg" alt="CSS3" />
+                <span>CSS3</span>
+              </div>
+            </div>
+
+            <div class="img-container">
+              <div class="blank-button">
+                <a class="link" href="#" target="_blank" hidden></a>
+                <img src="src/programaYa.png" alt="programaYa!" />
+                <div class="efect"></div>
+              </div>
+            </div>
+
+            <div class="container-button">
+              <button>
+                <a target="_blank" href="#">ProgramaYa!</a>
+              </button>
+            </div>
+          </div>
+          <div class="context">
+            <h2 class="project-title">pagina de inicio de seccion</h2>
+            <p class="details">
+              un inicio de seccion moderno y minimalista diseñado para ser
+              utilizado en cualquier dispositivo, desde tablets hasta
+              computadoras portátiles.
+            </p>
+
+            <div class="desarrollo-with">
+              <div>
+                <img src="./src/logos-svg/html-logo.svg" alt="HTML5" />
+                <span>HTML5</span>
+              </div>
+              <div>
+                <img src="./src/logos-svg/css-logo.svg" alt="CSS3" />
+                <span>CSS3</span>
+              </div>
+            </div>
+
+            <div class="img-container">
+              <div class="blank-button">
+                <a
+                  class="link"
+                  href="https://login-page-indol-six.vercel.app/"
+                  target="_blank"
+                  hidden
+                ></a>
+                <img src="src/login-signup.png" alt="login-signup" />
+                <div class="efect"></div>
+              </div>
+            </div>
+
+            <div class="container-button">
+              <button>
+                <a
+                  target="_blank"
+                  href="https://login-page-indol-six.vercel.app/"
+                  >LogIn - SignUp</a
+                >
+              </button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <div class="container">
+        <div class="title">
+          <i class="fa-regular fa-address-card"></i>
+          <h1>Habilidades</h1>
+        </div>
+        <div class="context">
+          <ul class="ul-habilidades">
+            <li class="title-item"><h3>Tecnologías web:</h3></li>
+            <ul>
+              <li>
+                <img
+                  src="./src/logos-svg/html-logo.svg"
+                  alt="HyperText Markup Language"
+                />
+                <span>HTML5</span>
+              </li>
+              <li>
+                <img
+                  src="./src/logos-svg/css-logo.svg"
+                  alt="Cascading Style Sheets"
+                />
+                <span>CSS3</span>
+              </li>
+            </ul>
+            <li class="title-item"><h3>Lenguajes de programación:</h3></li>
+            <ul>
+              <li>
+                <img
+                  src="./src/logos-svg/js-logo.svg"
+                  alt="Lenguaje JavaScript"
+                />
+                <span>JavaScript</span>
+              </li>
+              <li>
+                <img
+                  src="./src/logos-svg/python-logo.svg"
+                  alt="Lenguaje Python"
+                />
+                <span>Python</span>
+              </li>
+              <li>
+                <img
+                  src="./src/logos-svg/PHP-logo.svg.png"
+                  alt="Lenguaje PHP"
+                />
+                <span>PHP</span>
+              </li>
+              <li>
+                <img src="./src/logos-svg/dart-logo.svg" alt="Lenguaje Dart" />
+                <span>Dart</span>
+              </li>
+              <li>
+                <img src="./src/logos-svg/c-logo.svg" alt="Lenguaje C" />
+                <span>C</span>
+              </li>
+              <li>
+                <img src="./src/logos-svg/c-sharp-logo.svg" alt="Lenguaje C#" />
+                <span>C#</span>
+              </li>
+              <li>
+                <img src="./src/logos-svg/c++.svg" alt="Lenguaje C++" />
+                <span>C++</span>
+              </li>
+            </ul>
+            <li class="title-item"><h3>Frameworks:</h3></li>
+            <ul class="frameworks">
+              <li class="title-item"><h4>Con CSS:</h4></li>
+              <ul class="frames-css">
+                <li>
+                  <img
+                    src="./src/logos-svg/bootstrap-logo.svg"
+                    alt="Bootstrap"
+                  />
+                  <span>Bootstrap</span>
+                </li>
+                <li>
+                  <img src="./src/logos-svg/tailwind-logo.svg" alt="Tailwind" />
+                  <span>Tailwind</span>
+                </li>
+              </ul>
+              <li class="title-item"><h4>Con JavaScript:</h4></li>
+              <ul class="frames-js">
+                <li class="circle">Front-End:</li>
+                <ul>
+                  <li>
+                    <div>
+                      <!-- <i class="fa-brands fa-react" style="color: #61dbfb"></i> -->
+                      <img
+                        src="./src/logos-svg/react-js-logo.svg"
+                        alt="React.js"
+                      />
+                      <span>React.js</span>
+                    </div>
+                  </li>
+
+                  <li>
+                    <img src="./src/logos-svg/Vue-js-logo.svg" alt="Vue.js" />
+                    <span>Vue.js</span>
+                  </li>
+                  <li>
+                    <img src="./src/logos-svg/Nuxt-js-logo.svg" alt="Nuxt.js" />
+                    <span>Nuxt.js</span>
+                  </li>
+                </ul>
+                <li class="circle">Back-End:</li>
+                <ul>
+                  <li>
+                    <img src="./src/logos-svg/node-js-logo.svg" alt="Node.js" />
+                    <span>Node.js</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./src/logos-svg/express-js-logo.svg"
+                      alt="Express.js"
+                    />
+                    <span>Express.js</span>
+                  </li>
+                  <li>
+                    <img
+                      src="./src/logos-svg/mongoose-js-logo.svg"
+                      alt="Mongoose.js"
+                    />
+                    <span>Mongoose.js</span>
+                  </li>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+          <h4 class="special">
+            Especialización en JavaScript, con un enfoque destacado en React.js
+          </h4>
+        </div>
+        <div class="skills-container">
+          <h3>Experiencia Técnica:</h3>
+          <p>
+            Durante mi carrera, he trabajado con diversos protocolos, como
+            <span>HTTP</span> y <span>MQTT</span>, así como tecnologías de
+            comunicación en tiempo real, como WebSockets. Mi enfoque técnico se
+            ha centrado en la creación de aplicaciones web sólidas y eficientes,
+            destacando en la implementación de soluciones front-end atractivas y
+            funcionales.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="social">
+      <div class="container">
+        <div class="title">
+          <!-- <i class="fa-regular fa-at"></i> -->
+          <!-- <i class="fa-regular fa-hashtag"></i> -->
+          <i class="fa-regular fa-user"></i>
+          <h1>Social</h1>
+        </div>
+        <div class="context">
+          <h3>Numero de telefono:</h3>
+          <span class="number-phone">+58 424-7414048</span>
+
+          <h3>Correo Electronico:</h3>
+          <span class="mail">santiagoAndres79@outlook.es</span>
+          <span class="mail">tiagoddd279@gmail.com</span>
+
+          <h3>Otras Plataformas:</h3>
+
+          <div class="container-button">
+            <button>
+              <i class="fa-brands fa-github"></i>
+              <a target="_blank" href="https://github.com/Iammtiago">GitHub</a>
+            </button>
+            <button>
+              <i class="fa-brands fa-linkedin"></i>
+              <a
+                target="_blank"
+                href="http://www.linkedin.com/in/santiagoarodriguezc"
+                >LinkedIn</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="contact">
+      <div id="arrow">
+        <i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+      <h3 class="title">Contactame</h3>
+      <div class="container-app">
+        <div class="wpp">
+          <div class="icon"></div>
+          <h3>WhatsApp</h3>
+          <div class="codigoQr wpp"></div>
+          <a
+            href="http://https://wa.me/qr/EKM5JE2ER2T2L1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>WhatsApp</button>
+          </a>
+        </div>
+        <!-- <div class="telegram">
+          <i>tlgram</i>
+          <h3>Telegram</h3>
+          <div class="codigoQr telegram"></div>
+        </div> -->
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/458f84731a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
