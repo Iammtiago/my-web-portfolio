@@ -163,30 +163,6 @@ document.querySelector('.img-photo img').addEventListener('click', function () {
     });
 });
 
-// photo.addEventListener('click', function (e) {
-//     e.preventDefault();
-
-//     // if (bool) {
-//     //     imgContainer.style.height = "100vh";
-//     //     imgContainer.style.width = "100vw";
-
-//     //     photo.style.width = "70%";
-//     //     photo.style.height = "70%";
-
-//     // } else {
-
-//     //     imgContainer.style.height = "auto";
-//     //     imgContainer.style.width = "auto";
-//     //     imgContainer.style.justifyContent = "center"
-
-//     //     photo.style.width = "200px";
-//     //     photo.style.height = "200px";
-
-//     // }
-//     bool = !bool
-
-// });
-
 
 const arrowCuboQr = document.getElementById('arrow');
 const cuboQr = document.querySelector('.contact');
@@ -195,4 +171,24 @@ arrowCuboQr.addEventListener('click', function (e) {
     e.preventDefault()
 
     cuboQr.classList.toggle("open");
+});
+
+const buttonsCV = document.querySelectorAll('.cv');
+buttonsCV.forEach(element => {
+    element.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        var ancla = document.createElement("a");
+        ancla.download = "Santiago Rodriguez CV"
+
+        if (e.target.classList.value.includes("spanish")) {
+            ancla.href = "./src/cv/Santiago Rodriguez CV desarrollador.pdf"
+        } else {
+            ancla.href = "./src/cv/Santiago Rodriguez CV developer.pdf.pdf"
+        }
+
+        ancla.target = "_blank";
+
+        ancla.click();
+    });
 });
