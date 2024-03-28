@@ -164,6 +164,17 @@ document.querySelector('.img-photo img').addEventListener('click', function () {
 });
 
 
+document.querySelectorAll('.copy-text').forEach(element => {
+    element.addEventListener('click', function (e) {
+        e.stopPropagation()
+
+        
+
+        navigator.clipboard.writeText()
+    });
+})
+
+
 const arrowCuboQr = document.getElementById('arrow');
 const cuboQr = document.querySelector('.contact');
 
