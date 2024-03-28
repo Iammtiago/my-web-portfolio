@@ -1,8 +1,8 @@
 function scrollToElement(e) {
+    e.preventDefault();
     const hash = e.target.hash;
     // console.log(hash);
     if (hash !== "#social") {
-        e.preventDefault();
 
         const offset = (window.innerWidth >= 700) ? 97 : 35;
 
@@ -81,14 +81,6 @@ ancla.forEach(element => {
 windowOpenBlank(divButton);
 windowOpenBlank(projects);
 
-// divButton.forEach(element => {
-//     element.addEventListener('click', windowOpenBlank);
-// });
-
-// projects.forEach(element => {
-//     element.addEventListener('click', windowOpenBlank);
-// });
-
 const imgContainer = document.querySelector('.img-container');
 const aboutme = document.getElementById('sobremi');
 const header = document.querySelector('.header-nav');
@@ -164,18 +156,8 @@ document.querySelector('.img-photo img').addEventListener('click', function () {
 });
 
 
-document.querySelectorAll('.copy-text').forEach(element => {
-    element.addEventListener('click', function (e) {
-        e.stopPropagation()
-
-        
-
-        navigator.clipboard.writeText()
-    });
-})
-
-
 const arrowCuboQr = document.getElementById('arrow');
+const iconWpp = document.getElementById('iconWpp');
 const cuboQr = document.querySelector('.contact');
 
 arrowCuboQr.addEventListener('click', function (e) {
@@ -183,6 +165,14 @@ arrowCuboQr.addEventListener('click', function (e) {
 
     cuboQr.classList.toggle("open");
 });
+
+iconWpp.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    cuboQr.classList.add("open");
+});
+
+
 
 const buttonsCV = document.querySelectorAll('.cv');
 buttonsCV.forEach(element => {
@@ -192,10 +182,12 @@ buttonsCV.forEach(element => {
         var ancla = document.createElement("a");
         ancla.download = "Santiago Rodriguez CV"
 
-        if (e.target.classList.value.includes("spanish")) {
-            ancla.href = "./src/cv/Santiago Rodriguez CV desarrollador.pdf"
+        // console.log(e.target.parentNode);
+        // console.log(e.target.parentNode.classList.value.includes("spanish"));
+        if (e.target.parentNode.classList.value.includes("spanish")) {
+            ancla.href = "./src/cv/CV-spanish.pdf"
         } else {
-            ancla.href = "./src/cv/Santiago Rodriguez CV developer.pdf.pdf"
+            ancla.href = "./src/cv/CV-inglish.pdf"
         }
 
         ancla.target = "_blank";
