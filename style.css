@@ -88,18 +88,18 @@ html {
   &::-webkit-scrollbar-thumb {
     /* background: #007db9; */
     border-radius: 40px 40px 40px 40px;
-    background: var(--matisse-50);
+    background: var(--matisse-900);
 
     transition: all 0.3s ease;
   }
 
   &::-webkit-scrollbar-thumb:hover {
     transition: all 0.3s ease;
-    background: var(--matisse-transparent-dark-50);
+    /* background: var(--matisse-transparent-dark-900); */
   }
 
   &::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(97, 97, 97, 0.4);
     transition: all 0.3s ease;
   }
 }
