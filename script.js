@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
         imgContainer.classList.remove('small');
         aboutme.style.marginTop = "0px"
 
+        document.getElementById('wpp-icon-social')
     }
 
     window.addEventListener('scroll', function () {

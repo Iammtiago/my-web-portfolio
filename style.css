@@ -1650,6 +1650,11 @@ section#social {
           background: #0077b5;
         }
 
+        .BG.wpp {
+          background-color: #34bc38;
+          /* background: #075e54; */
+        }
+
         .Btn:hover .BG {
           transform: rotate(27deg);
           transform-origin: bottom;
@@ -1659,6 +1664,10 @@ section#social {
           background-color: rgba(156, 156, 156, 0.466);
           backdrop-filter: blur(4px);
         }
+      }
+
+      & a.wpp-icon-social {
+        display: none;
       }
     }
   }
@@ -2362,6 +2371,14 @@ div.contact {
 
     & .title {
       margin-bottom: 24px;
+    }
+
+    & .context {
+      & .container-button {
+        & a.wpp-icon-social {
+          display: contents;
+        }
+      }
     }
   }
 
