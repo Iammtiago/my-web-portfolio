@@ -1,3 +1,6 @@
+// import JsonData from "./projects.json";
+// const JsonData = require("./projects.json");
+
 function scrollToElement(e) {
     e.preventDefault();
     const hash = e.target.hash;
@@ -26,6 +29,22 @@ function scrollToElement(e) {
     }
 }
 
+async function fetchProject() {
+    const allProjects = document.querySelector('.all-projects');
+    // const response = fetch('./projects.json', {
+    //     mode: "no-cors"
+    // });
+    fetch('./projects.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+    // console.log(response);
+    // const projects = await response.text()
+    // console.log(projects);
+}
+
+fetchProject();
 
 var boolClick = true;
 function windowOpenBlank(elements) {
@@ -71,15 +90,15 @@ function windowOpenBlank(elements) {
 
 
 const ancla = document.querySelectorAll('.ancla');
-const divButton = document.querySelectorAll('.blank-button');
-const projects = document.querySelectorAll('.project');
 
 ancla.forEach(element => {
     element.addEventListener('click', scrollToElement);
 })
 
-windowOpenBlank(divButton);
-windowOpenBlank(projects);
+const divButtonAll = document.querySelectorAll('.blank-button');
+const projectsAll = document.querySelectorAll('.project');
+windowOpenBlank(divButtonAll);
+windowOpenBlank(projectsAll);
 
 const imgContainer = document.querySelector('.img-container');
 const aboutme = document.getElementById('sobremi');
@@ -116,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
             aboutme.style.marginTop = "330px"
 
         } else if (window.scrollY < 119 && window.innerWidth > 700) {
-            console.log(window.scrollY);
+            // console.log(window.scrollY);
             aboutme.style.marginTop = "0px"
             imgContainer.classList.remove('small');
             photo.style.height = parseInt(photo.style.height) - parseInt(window.scrollY) + "px";
