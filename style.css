@@ -868,8 +868,7 @@ i {
         /* flex-basis: 70%; */
         /* margin: 0 100px; */
         max-width: 800px;
-
-        padding-bottom: 1.5rem;
+        /* padding-bottom: 1.5rem; */
 
         & .context {
           & .info {
@@ -950,8 +949,8 @@ i {
               min-height: 27vw;
               width: 100%;
 
-              transition: transform 0.5s ease-in-out;
               -webkit-transition: transform 0.5s ease-in-out;
+              transition: transform 0.5s ease-in-out;
 
               &:hover {
                 transform: scale(1.02) translateY(-0.3rem);
