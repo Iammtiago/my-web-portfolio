@@ -164,9 +164,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 var bool = true
-document.querySelector('.img-photo img').addEventListener('click', function () {
-    event.stopPropagation();
-    this.classList.toggle('expanded');
+document.querySelector('.img-photo img').addEventListener('click', function (event) {
+    // event.stopPropagation();
+    // this.classList.toggle('expanded');
 
     document.body.classList.toggle('no-scroll');
 
@@ -205,9 +205,9 @@ buttonsCV.forEach(element => {
         // console.log(e.target.parentNode);
         // console.log(e.target.parentNode.classList.value.includes("spanish"));
         if (e.target.parentNode.classList.value.includes("spanish")) {
-            ancla.href = "./src/cv/CV-spanish.pdf"
+            ancla.href = "./src/cv/Santiago Rodriguez curriculum spanish.pdf"
         } else {
-            ancla.href = "./src/cv/CV-inglish.pdf"
+            ancla.href = "./src/cv/Santiago Rodriguez curriculum english.pdf"
         }
 
         ancla.target = "_blank";

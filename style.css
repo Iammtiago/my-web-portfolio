@@ -407,6 +407,8 @@ i {
     display: flex;
     align-self: center;
     justify-content: center;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out,
+      height 0.3s ease-in-out, border 0.3s ease-in-out, filter 0.3s ease-in-out;
   }
 
   & .img-photo img {
@@ -420,14 +422,14 @@ i {
     margin-bottom: 30px;
     border: 2px solid transparent;
 
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease,
-      border 0.3s ease-in, filter 0.3s ease;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out,
+      height 0.3s ease-in-out, border 0.3s ease-in-out, filter 0.3s ease-in-out;
     /* transition: transform 0.3s ease; */
 
     &:hover {
       border: 2px solid var(--matisse-10);
       /* border: 2px solid #ffffffb2; */
-      cursor: pointer;
+      cursor: default;
     }
 
     &:active {
@@ -442,7 +444,7 @@ i {
     height: 37%; /* Cambia la altura */
     z-index: 27; /* Asegúrate de que la imagen ampliada esté en la parte superior */
     filter: brightness(90%); /* Aplica un filtro para opacar el fondo */
-    cursor: pointer; /* Cambia el cursor para indicar que se puede cerrar */
+    cursor: default;
   }
 }
 
