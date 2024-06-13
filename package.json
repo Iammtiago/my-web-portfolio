@@ -1,5 +1,18 @@
 {
+  "name": "my-portfolio-web",
+  "main": "server.js",
+  "description": "",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Tiago Rodriguez",
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {},
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
   }
 }

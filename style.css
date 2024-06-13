@@ -1043,7 +1043,6 @@ i {
                   font-size: 16px;
                   color: var(--matisse-900);
                   margin-left: 2px;
-
                   transition: all 0.32s ease-in-out;
                 }
 
@@ -1145,6 +1144,7 @@ i {
                   margin-right: 5px;
                   background-size: contain;
                   background-position: center center;
+                  min-width: 3rem;
                 }
 
                 & img.img-html-css {
@@ -2169,15 +2169,12 @@ div.contact {
   .header-nav {
     position: static;
     background: transparent;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     /* align-items: flex-start; */
-
     /* margin-top: 79px; */
-
-    height: 37vh;
+    height: auto;
 
     & nav {
       display: flex;
@@ -2186,7 +2183,6 @@ div.contact {
       /* margin-top: 200px; */
       margin: 35px 0 27px;
       /* margin-bottom: 10px; */
-
       text-align: center;
 
       & .menu {
