@@ -11,6 +11,12 @@ app.use(cors());
 app.use(express.static(path.join(__dirname)));
 app.use('/src', express.static(path.join(__dirname, 'src')));
 
+app.get('/homee', (req, res) => {
+    res.status(200).json('¡Bienvenido! Tu aplicación funciona correctamente.');
+});
+
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
 });
+
+module.exports = app;
