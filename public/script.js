@@ -1,6 +1,3 @@
-// import JsonData from "./projects.json";
-// const JsonData = require("./projects.json");
-
 function scrollToElement(e) {
     e.preventDefault();
     const hash = e.target.hash;
@@ -14,11 +11,11 @@ function scrollToElement(e) {
         posicionY = Math.round(posicionY)
         // console.log(posicionY);
 
-
         window.scrollTo({
             top: posicionY,
             behavior: 'smooth'
         });
+
     } else {
         const element = document.querySelector(hash);
         let posicionY = Number(element.getBoundingClientRect().top + window.scrollY);
