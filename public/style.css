@@ -423,13 +423,17 @@ i {
     border: 2px solid transparent;
 
     transition: transform 0.3s ease-in-out, width 0.3s ease-in-out,
-      height 0.3s ease-in-out, border 0.3s ease-in-out, filter 0.3s ease-in-out;
+      height 0.3s ease-in-out, border 0.3s ease-in-out, filter 0.3s ease-in-out, margin 0.3s ease-in-out;
     /* transition: transform 0.3s ease; */
 
     &:hover {
       border: 2px solid var(--matisse-10);
       /* border: 2px solid #ffffffb2; */
-      cursor: default;
+      cursor: pointer;
+      transform: scale(1.2);
+      margin-top: 20px;
+      margin-bottom: 60px;
+
     }
 
     &:active {
