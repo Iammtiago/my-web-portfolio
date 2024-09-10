@@ -185,7 +185,7 @@ function createProjectStructure({ title, href, imgSrc, altImage, details, linkRe
 
 async function fetchProject() {
     const allProjects = document.querySelector('.all-projects');
-    const response = await fetch('./projects.json');
+    const response = await fetch('./projects_2.json');
 
     const data = await response.json();
     const projects = data.projects;

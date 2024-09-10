@@ -1,0 +1,109 @@
+{
+    "projects": [
+        {
+            "title": "AVIVA C.A.",
+            "href": "https://aviva.com.ve",
+            "imgSrc": "/src/assets/images/pages-cap/aviva.png",
+            "altImage": " AVIVA",
+            "linkRepository": "",
+            "details": "Esta es una página de una empresa automotriz creada con Wordpress.",
+            "frameworks": [
+                {
+                    "nameFramework": "WordPress",
+                    "imgSrcFramework": "/src/assets/logos/png/wordpress-logo.png",
+                    "hrefFramework": "https://wordpress.org/"
+                },
+                {
+                    "nameFramework": "PHP",
+                    "imgSrcFramework": "/src/assets/logos/png/PHP-logo.png",
+                    "hrefFramework": "https://www.php.net/"
+                }
+            ]
+        },
+        {
+            "title": "DomoLuz",
+            "href": "https://domoluz.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/domoluz.png",
+            "altImage": " DomoLuz",
+            "linkRepository": "https://github.com/Iammtiago/react-landing-page",
+            "details": "Esta es una página sobre Domotica y iluminacion creada con ReactJS.",
+            "frameworks": [
+                {
+                    "nameFramework": "ReactJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/react-js-logo.svg",
+                    "hrefFramework": "https://react.dev/"
+                },
+                {
+                    "nameFramework": "Tailwind",
+                    "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
+                    "hrefFramework": "https://tailwindcss.com/"
+                }
+            ]
+        },
+        {
+            "title": "ProgramaYa!",
+            "href": "https://programa-ya.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/programaYa.png",
+            "altImage": "programaYa! lading page",
+            "linkRepository": "https://github.com/Iammtiago/programa-ya",
+            "details": "programaYa! es una plataforma web 100% responsive design, que permite a los usuarios ver paginas con cursos gratis sobre programacion de aplicaciones moviles o desarrollo de paginas web.",
+            "frameworks": [
+                {
+                    "nameFramework": "HTML5",
+                    "imgSrcFramework": "/src/assets/logos/svg/html-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/HTML"
+                },
+                {
+                    "nameFramework": "CSS3",
+                    "imgSrcFramework": "/src/assets/logos/svg/css-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/CSS"
+                }
+            ]
+        },
+        {
+            "title": "Shopi",
+            "href": "https://shopi-phi.vercel.app",
+            "imgSrc": "/src/assets/images/pages-cap/shopi-vercel.png",
+            "altImage": "React E-commerce",
+            "linkRepository": "https://github.com/Iammtiago/react-shop",
+            "details": "Shopi es una plataforma E-Commerce (tienda online), permite ver, agregar, eliminar productos al carrito, permite ver con detalles el producto seleccionado, tiene para buscar un producto por categoria o/y nombre. tiene para ver todas las compras hechas, con un formato dia/mes/año. tiene un simple inicio de sesión y un registro",
+            "frameworks": [
+                {
+                    "nameFramework": "ReactJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/react-js-logo.svg",
+                    "hrefFramework": "https://react.dev/"
+                },
+                {
+                    "nameFramework": "Vite",
+                    "imgSrcFramework": "/src/assets/logos/svg/vite-js-logo.svg",
+                    "hrefFramework": "https://vitejs.dev/"
+                },
+                {
+                    "nameFramework": "Tailwind",
+                    "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
+                    "hrefFramework": "https://tailwindcss.com/"
+                }
+            ]
+        },
+        {
+            "title": "pagina de inicio de sesión",
+            "href": "https://login-page-indol-six.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/login-signup.png",
+            "altImage": "login-signUp page",
+            "linkRepository": "https://github.com/Iammtiago/login_signup-page",
+            "details": "un inicio de sesión moderno y minimalista diseñado para ser utilizado en cualquier dispositivo, desde tablets hasta computadoras portátiles.",
+            "frameworks": [
+                {
+                    "nameFramework": "HTML5",
+                    "imgSrcFramework": "/src/assets/logos/svg/html-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/HTML"
+                },
+                {
+                    "nameFramework": "CSS3",
+                    "imgSrcFramework": "/src/assets/logos/svg/css-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/CSS"
+                }
+            ]
+        }
+    ]
+}
