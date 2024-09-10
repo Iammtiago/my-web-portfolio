@@ -1788,7 +1788,7 @@ div.contact.open {
     }
 
     & div.codigoQr.wpp {
-      background-image: url("./src/codigosQR/codigoQr-WPP-1.1.jpg");
+      background-image: url("./../src/assets/images/codigosQR/codigoQr-WPP-1.1.jpg");
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -1872,7 +1872,7 @@ div.contact {
         /* background: #41b883; */
         height: 40px;
         width: 40px;
-        background-image: url("./src/icons/icon-wpp.png");
+        background-image: url("./../src/assets/icons/icon-wpp.png");
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;

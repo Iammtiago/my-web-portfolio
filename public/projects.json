@@ -10,7 +10,7 @@
             "frameworks": [
                 {
                     "nameFramework": "WordPress",
-                    "imgSrcFramework": "./../src/assets/logos/png/wordpress-logo.svg",
+                    "imgSrcFramework": "./../src/assets/logos/png/wordpress-logo.png",
                     "hrefFramework": "https://wordpress.org/"
                 },
                 {

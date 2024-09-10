@@ -2,7 +2,7 @@
   "name": "my-portfolio-web",
   "main": "server.js",
   "description": "My Portfolio Web",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
@@ -10,9 +10,9 @@
   "author": "Tiago Rodriguez",
   "keywords": [],
   "license": "ISC",
-  "devDependencies": {},
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "my-portfolio-web": "file:"
   }
 }
