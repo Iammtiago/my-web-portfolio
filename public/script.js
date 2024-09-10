@@ -26,8 +26,6 @@ function scrollToElement(e) {
     }
 }
 
-
-
 var boolClick = true;
 function windowOpenBlank(elements) {
     elements.forEach(element => {
@@ -85,7 +83,7 @@ function createDevelopmentStructure(frameworks) {
         ancla.appendChild(divImageBox);
 
         const imgLogoFramework = document.createElement('img');
-        imgLogoFramework.src = framework?.imgSrcFramework ?? "src/pages-cap/react-lading-page.png";
+        imgLogoFramework.src = framework?.imgSrcFramework ?? "./../src/assets/images/pages-cap/domoluz.png";
         imgLogoFramework.alt = framework?.nameFramework || "";
         divImageBox.appendChild(imgLogoFramework);
 
@@ -114,10 +112,6 @@ function createProjectStructure({ title, href, imgSrc, altImage, details, linkRe
     divProject.classList.add('project');
     divProject.classList.add('blank-button');
 
-    // let anclaFirst = document.createElement('a');
-    // anclaFirst.href = href;
-    // anclaFirst.target = '_blank';
-    // anclaFirst.hidden = true;
     divProject.appendChild(createAnclaBlank(href, true));
 
     let divContext = document.createElement('div');
@@ -133,9 +127,6 @@ function createProjectStructure({ title, href, imgSrc, altImage, details, linkRe
     divInfo.classList.add('info');
     divInfo.classList.add('blank-button');
 
-    // let anclaImg = document.createElement('a');
-    // anclaImg.href = href;
-    // anclaImg.target = '_blank';
     let anclaImg = createAnclaBlank(href, false);
     anclaImg.classList.add('link');
     divImgContainer.appendChild(anclaImg);
@@ -146,12 +137,7 @@ function createProjectStructure({ title, href, imgSrc, altImage, details, linkRe
     imgProject.alt = altImage;
 
 
-    // let anclaSecond = document.createElement('a');
-    // anclaSecond.href = href;
-    // anclaSecond.target = '_blank';
-    // anclaSecond.hidden = true;
     divInfo.appendChild(createAnclaBlank(href, true));
-
 
     let divContentTitleParagraph = document.createElement('div');
     divContentTitleParagraph.classList.add("content-title-p");
@@ -200,11 +186,6 @@ function createProjectStructure({ title, href, imgSrc, altImage, details, linkRe
 async function fetchProject() {
     const allProjects = document.querySelector('.all-projects');
     const response = await fetch('./projects.json');
-    // fetch('./projects.json')
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log(data);
-    //     });
 
     const data = await response.json();
     const projects = data.projects;
@@ -222,16 +203,7 @@ async function fetchProject() {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // if (window.scrollY > 120 && window.innerWidth > 700) {
-    //     img.classList.add('small');
-    //     img.classList.remove('img-photo');
-    //     aboutme.style.marginTop = "330px"
-
-    // }
-
     fetchProject();
-
-
 
     if (window.innerWidth > 700) {
         imgContainer.classList.add('img-photo');
@@ -271,10 +243,6 @@ document.addEventListener("DOMContentLoaded", function () {
             aboutme.style.marginTop = "0px"
 
         }
-
-        // var lastScroll = (window.scrollY < 297) ? 297 : Math.round(lastScroll);
-
-        // console.log(lastScroll);
 
     });
 });
@@ -336,8 +304,6 @@ buttonsCV.forEach(element => {
         var ancla = document.createElement("a");
         ancla.download = "Santiago Rodriguez CV"
 
-        // console.log(e.target.parentNode);
-        // console.log(e.target.parentNode.classList.value.includes("spanish"));
         if (e.target.parentNode.classList.value.includes("spanish")) {
             ancla.href = "./src/cv/Santiago Rodriguez curriculum spanish.pdf"
         } else {
