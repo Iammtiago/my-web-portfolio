@@ -7,7 +7,7 @@ function scrollToElement(e) {
         const offset = (window.innerWidth >= 700) ? 97 : 35;
 
         const element = document.querySelector(hash);
-        let posicionY = Number(element.getBoundingClientRect().top + window.scrollY - offset);
+        let posicionY = Number(element?.getBoundingClientRect().top + window.scrollY - offset);
         posicionY = Math.round(posicionY)
         // console.log(posicionY);
 
@@ -205,60 +205,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetchProject();
 
-    if (window.innerWidth > 700) {
-        imgContainer.classList.add('img-photo');
-        // aboutme.style.marginTop = "50px"
-    }
-
-    if (window.innerWidth < 700) {
-        imgContainer.classList.add('img-photo');
-        imgContainer.classList.remove('small');
-        aboutme.style.marginTop = "0px"
-
-        document.getElementById('wpp-icon-social')
-    }
-
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 120 && window.innerWidth > 700) {
-            imgContainer.classList.remove('img-photo');
-            imgContainer.classList.add('small');
-            aboutme.style.marginTop = "330px"
-
-        } else if (window.scrollY < 119 && window.innerWidth > 700) {
-            // console.log(window.scrollY);
-            aboutme.style.marginTop = "0px"
-            imgContainer.classList.remove('small');
-            photo.style.height = parseInt(photo.style.height) - parseInt(window.scrollY) + "px";
-            // photo.style.height = `${window.scrollY - 200}px`;
-            // console.log("img:", photo.style.height);
-
-        } else if (window.innerWidth > 700) {
-            imgContainer.classList.add('img-photo');
-            aboutme.style.marginTop = "50px"
-        }
-
-        if (window.innerWidth < 700) {
-            imgContainer.classList.add('img-photo');
-            imgContainer.classList.remove('small');
-            aboutme.style.marginTop = "0px"
-
-        }
-
-    });
 });
 
+const navbar = document.querySelector('nav#navbar-desktop');
+const ixmark = document.getElementById('i-xmark');
+ixmark.hidden = true;
+const imenu = document.getElementById('i-menu');
+document.getElementById("icon-menu").addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    navbar.classList.toggle("active");
+    (navbar.classList.contains("active")) ? (
+        ixmark.style.display = "inline-block", imenu.style.display = "none",
+        document.body.style.overflow = 'hidden', document.body.style.touchAction = "none"
+    ) : (ixmark.style.display = "none", imenu.style.display = "inline-block",
+        document.body.style.overflow = '', document.body.style.touchAction = "auto"
+    );
+})
 
+function removeActive() {
+    navbar.classList.remove("active");
+    ixmark.style.display = "none";
+    imenu.style.display = "inline-block";
+    document.body.style.overflow = '';
+    document.body.style.touchAction = "auto"
+}
 
-var bool = true
-document.querySelector('.img-photo img').addEventListener('click', function (event) {
-    // event.stopPropagation();
-    // this.classList.toggle('expanded');
+document.body.addEventListener('click', function (event) {
+    const container = document.querySelector('.menu');
+    const anclas = document.querySelectorAll('a.link');
 
-    document.body.classList.toggle('no-scroll');
+    anclas.forEach(a => {
+        if (a.contains(event.target)) { 
+            removeActive();
+        }
+    })
 
-    window.addEventListener('scroll', function (e) {
-        // document.querySelector('.img-photo img').classList.remove('expanded');
-    });
+    if (!container.contains(event.target)) {
+        removeActive();
+    }
 });
 
 const ancla = document.querySelectorAll('.ancla');
@@ -272,7 +257,6 @@ const projectsAll = document.querySelectorAll('.project');
 windowOpenBlank(divButtonAll);
 windowOpenBlank(projectsAll);
 
-const imgContainer = document.querySelector('.img-container');
 const aboutme = document.getElementById('sobremi');
 const header = document.querySelector('.header-nav');
 const photo = document.getElementById('photo');
