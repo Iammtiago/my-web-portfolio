@@ -228,7 +228,18 @@ async function fetchSkills() {
     //     "name": "MongoDB",
     //         "imgSrc": "./../src/assets/logos/svg/mongodb-logo.svg",
     //             "altImg": "MongoDB: Sistema de gestión de bases de datos relacionales de objetos"
-    // }
+    // },
+    // {
+    //     "name": "VueJS",
+    //         "imgSrc": "./../src/assets/logos/svg/vue-js-logo.svg",
+    //             "altImg": "Vue: Framework de JS"
+    // },
+    // {
+    //     "name": "NuxtJS",
+    //         "imgSrc": "./../src/assets/logos/svg/nuxt-js-logo.svg",
+    //             "altImg": "Nuxt: libraria de JS basado Vue"
+    // },
+
     // console.log(data.skills);
 
     const skills = data.skills;

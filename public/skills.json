@@ -31,16 +31,6 @@
             "altImg": "React: libraria de JS"
         },
         {
-            "name": "VueJS",
-            "imgSrc": "./../src/assets/logos/svg/vue-js-logo.svg",
-            "altImg": "Vue: Framework de JS"
-        },
-        {
-            "name": "NuxtJS",
-            "imgSrc": "./../src/assets/logos/svg/nuxt-js-logo.svg",
-            "altImg": "Nuxt: libraria de JS basado Vue"
-        },
-        {
             "name": "NodeJS",
             "imgSrc": "./../src/assets/logos/svg/node-js-logo.svg",
             "altImg": "Node.js"
