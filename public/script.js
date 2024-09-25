@@ -201,27 +201,55 @@ async function fetchProject() {
     // console.log(data.projects[0]);
 }
 
+function createSkillStructure({ name, imgSrc, altImg }) {
+    let cardLi = document.createElement('li'); 
+    let divImg = document.createElement('div')
+    let imgContainer = document.createElement('img');
+    let span = document.createElement('span');
+
+    divImg.appendChild(imgContainer);
+    cardLi.appendChild(divImg);
+    cardLi.appendChild(span);
+
+    imgContainer.src = imgSrc;
+    imgContainer.alt = altImg;
+    span.textContent = name;
+
+    return cardLi;
+}
+
+async function fetchSkills() {
+    const ulContainer = document.createElement('ul');
+
+    const response = await fetch('./skills.json');
+    const data = await response.json();
+    
+    // {
+    //     "name": "MongoDB",
+    //         "imgSrc": "./../src/assets/logos/svg/mongodb-logo.svg",
+    //             "altImg": "MongoDB: Sistema de gestión de bases de datos relacionales de objetos"
+    // }
+    // console.log(data.skills);
+
+    const skills = data.skills;
+    for (const skill of skills) {
+
+        let res = createSkillStructure(skill);
+        ulContainer.appendChild(res);
+
+    }
+
+    divSkills.appendChild(ulContainer)
+
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    fetchProject();
+    // fetchProject();
+    fetchSkills();
 
 });
-
-const navbar = document.querySelector('nav#navbar-desktop');
-const ixmark = document.getElementById('i-xmark');
-ixmark.hidden = true;
-const imenu = document.getElementById('i-menu');
-document.getElementById("icon-menu").addEventListener('click', (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    navbar.classList.toggle("active");
-    (navbar.classList.contains("active")) ? (
-        ixmark.style.display = "inline-block", imenu.style.display = "none",
-        document.body.style.overflow = 'hidden', document.body.style.touchAction = "none"
-    ) : (ixmark.style.display = "none", imenu.style.display = "inline-block",
-        document.body.style.overflow = '', document.body.style.touchAction = "auto"
-    );
-})
 
 function removeActive() {
     navbar.classList.remove("active");
@@ -236,7 +264,7 @@ document.body.addEventListener('click', function (event) {
     const anclas = document.querySelectorAll('a.link');
 
     anclas.forEach(a => {
-        if (a.contains(event.target)) { 
+        if (a.contains(event.target)) {
             removeActive();
         }
     })
@@ -261,6 +289,24 @@ const aboutme = document.getElementById('sobremi');
 const header = document.querySelector('.header-nav');
 const photo = document.getElementById('photo');
 
+const divSkills = document.querySelector('div.skills');
+
+const navbar = document.querySelector('nav#navbar-desktop');
+const ixmark = document.getElementById('i-xmark');
+ixmark.hidden = true;
+const imenu = document.getElementById('i-menu');
+
+document.getElementById("icon-menu").addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    navbar.classList.toggle("active");
+    (navbar.classList.contains("active")) ? (
+        ixmark.style.display = "inline-block", imenu.style.display = "none",
+        document.body.style.overflow = 'hidden', document.body.style.touchAction = "none"
+    ) : (ixmark.style.display = "none", imenu.style.display = "inline-block",
+        document.body.style.overflow = '', document.body.style.touchAction = "auto"
+    );
+})
 
 const arrowCuboQr = document.getElementById('arrow');
 const iconWpp = document.getElementById('iconWpp');
@@ -277,8 +323,6 @@ iconWpp.addEventListener('click', function (e) {
 
     cuboQr.classList.add("open");
 });
-
-
 
 const buttonsCV = document.querySelectorAll('.cv');
 buttonsCV.forEach(element => {

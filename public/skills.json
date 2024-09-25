@@ -1,0 +1,94 @@
+{
+    "skills": [
+        {
+            "name": "HTML5",
+            "imgSrc": "./../src/assets/logos/svg/html-logo.svg",
+            "altImg": "HTML5"
+        },
+        {
+            "name": "CSS3",
+            "imgSrc": "./../src/assets/logos/svg/css-logo.svg",
+            "altImg": "CSS3"
+        },
+        {
+            "name": "JavaScript",
+            "imgSrc": "./../src/assets/logos/svg/js-logo.svg",
+            "altImg": "Lenguaje JavaScript"
+        },
+        {
+            "name": "Tailwind",
+            "imgSrc": "./../src/assets/logos/svg/tailwind-logo.svg",
+            "altImg": "Tailwind: Framework de CSS3"
+        },
+        {
+            "name": "Bootstrap",
+            "imgSrc": "./../src/assets/logos/svg/bootstrap-logo.svg",
+            "altImg": "Bootstrap: Framework de CSS3"
+        },
+        {
+            "name": "ReactJS",
+            "imgSrc": "./../src/assets/logos/svg/react-js-logo.svg",
+            "altImg": "React: libraria de JS"
+        },
+        {
+            "name": "VueJS",
+            "imgSrc": "./../src/assets/logos/svg/vue-js-logo.svg",
+            "altImg": "Vue: Framework de JS"
+        },
+        {
+            "name": "NuxtJS",
+            "imgSrc": "./../src/assets/logos/svg/nuxt-js-logo.svg",
+            "altImg": "Nuxt: libraria de JS basado Vue"
+        },
+        {
+            "name": "NodeJS",
+            "imgSrc": "./../src/assets/logos/svg/node-js-logo.svg",
+            "altImg": "Node.js"
+        },
+        {
+            "name": "Express",
+            "imgSrc": "./../src/assets/logos/svg/express-js-logo.svg",
+            "altImg": "Express: Framework de Node.js"
+        },
+        {
+            "name": "PHP",
+            "imgSrc": "./../src/assets/logos/svg/php-logo.svg",
+            "altImg": "Lenguaje PHP"
+        },
+        {
+            "name": "Python",
+            "imgSrc": "./../src/assets/logos/svg/python-logo.svg",
+            "altImg": "Lenguaje Python"
+        },
+        {
+            "name": "Dart",
+            "imgSrc": "./../src/assets/logos/svg/dart-logo.svg",
+            "altImg": "Lenguaje Dart"
+        },
+        {
+            "name": "C",
+            "imgSrc": "./../src/assets/logos/svg/c-logo.svg",
+            "altImg": "Lenguaje C"
+        },
+        {
+            "name": "Git",
+            "imgSrc": "./../src/assets/logos/svg/git-logo.svg",
+            "altImg": "Git: Sistema de control de versiones"
+        },
+        {
+            "name": "SQL",
+            "imgSrc": "./../src/assets/logos/svg/sql-logo.svg",
+            "altImg": "SQL: Lenguaje de consulta estructurado (Structured Query Language)"
+        },
+        {
+            "name": "MySQL",
+            "imgSrc": "./../src/assets/logos/svg/mysql-logo.svg",
+            "altImg": "MySQL: Sistema de gestión de bases de datos relacionales"
+        },
+        {
+            "name": "PostgreSQL",
+            "imgSrc": "./../src/assets/logos/svg/postgresql-logo.svg",
+            "altImg": "Postgresql: Sistema de gestión de bases de datos relacionales de objetos"
+        }
+    ]
+}
