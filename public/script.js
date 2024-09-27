@@ -257,8 +257,8 @@ async function fetchSkills() {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    fetchProject();
-    fetchSkills();
+    // fetchProject();
+    // fetchSkills();
 
 });
 

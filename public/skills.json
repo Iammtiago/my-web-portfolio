@@ -37,12 +37,12 @@
         },
         {
             "name": "Express",
-            "imgSrc": "./../src/assets/logos/svg/express-js-logo.svg",
+            "imgSrc": "./../src/assets/logos/svg/express-js-light-logo.svg",
             "altImg": "Express: Framework de Node.js"
         },
         {
             "name": "PHP",
-            "imgSrc": "./../src/assets/logos/svg/php-logo.svg",
+            "imgSrc": "./../src/assets/logos/svg/php-light-logo.svg",
             "altImg": "Lenguaje PHP"
         },
         {
