@@ -14,6 +14,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "my-portfolio-web": "file:",
+    "nodemailer": "^6.9.15",
     "nodemon": "^3.1.7"
   }
 }

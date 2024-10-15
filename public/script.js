@@ -254,6 +254,41 @@ async function fetchSkills() {
 
 }
 
+document.querySelector('.form-contact').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('contact-name').value;
+    const mail = document.getElementById('contact-mail').value;
+    const message = document.getElementById('contact-message').value;
+
+    if (
+        name &&
+        mail.includes("@") && mail &&
+        message 
+
+    ) {
+        fetch('/api/send-mail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, mail, message })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('data:', data);
+                name.value = "";
+                mail.value = "";
+                message.value = "";
+                
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+
+    
+});
 
 document.addEventListener("DOMContentLoaded", function () {
 
