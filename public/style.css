@@ -1308,6 +1308,7 @@ section#social {
 
             & input {
               padding: 12px 16px;
+              font-size: 16px;
             }
 
             & textarea {
@@ -1316,6 +1317,7 @@ section#social {
               /* width: calc(70% + 18px); */
               width: 100%;
               padding: 9px 12px;
+              font-size: 16px;
             }
           }
 
