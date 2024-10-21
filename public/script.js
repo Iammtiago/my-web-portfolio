@@ -1,3 +1,18 @@
+toastr.options = {
+    closeButton: true, //Agrega un botón de cierre a la notificación.
+    progressBar: true, //Muestra una barra de progreso para indicar el tiempo restante de la notificación.
+    positionClass: 'toast-bottom-left', //Define la posición de la notificación en la pantalla.
+    showDuration: '200', //Duración del efecto de entrada en milisegundos.
+    hideDuration: '500', //Duración del efecto de salida en milisegundos.
+    timeOut: '3600', //Tiempo que la notificación se muestra antes de desaparecer.
+    extendedTimeOut: '1500', //Tiempo que la notificación permanece visible al pasar el mouse sobre ella.
+    showEasing: 'swing', //Valores: 'swing', 'linear'
+    hideEasing: 'linear', //Valores: 'swing', 'linear'
+    showMethod: 'fadeIn', //Valores: 'fadeIn', 'slideDown'
+    hideMethod: 'slideUp', //Valores: 'fadeOut', 'slideUp'
+    preventDuplicates: true
+};
+
 function scrollToElement(e) {
     e.preventDefault();
     const hash = e.target.hash;
@@ -256,23 +271,24 @@ async function fetchSkills() {
 
 document.querySelector('.form-contact').addEventListener('submit', function (e) {
     e.preventDefault();
+    e.stopPropagation();
 
-    const name = document.getElementById('contact-name').value;
-    const mail = document.getElementById('contact-mail').value;
-    const message = document.getElementById('contact-message').value;
+    let name = document.getElementById('contact-name');
+    let mail = document.getElementById('contact-mail');
+    let message = document.getElementById('contact-message');
 
     if (
-        name &&
-        mail.includes("@") && mail &&
-        message 
-
+        name.value &&
+        mail.value.includes("@") && mail.value &&
+        message.value
     ) {
+
         fetch('/api/send-mail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ name, mail, message })
+            body: JSON.stringify({ name: name.value, mail: mail.value, message: message.value })
         })
             .then(response => response.json())
             .then(data => {
@@ -280,13 +296,28 @@ document.querySelector('.form-contact').addEventListener('submit', function (e) 
                 name.value = "";
                 mail.value = "";
                 message.value = "";
-                
+
+                // notie.alert({
+                //     type: "success", // optional, default = 4, enum: [1, 2, 3, 4, 5, 'success', 'warning', 'error', 'info', 'neutral']
+                //     text: "Correo enviado",
+                //     time: 3, // optional, default = 3, minimum = 1,
+                //     position: 'bottom' // optional, default = 'top', enum: ['top', 'bottom']
+                // })
+
+                toastr.success('Correo enviado con exito!');
+
             })
             .catch((error) => {
                 console.error('Error:', error);
-            });
-    }
+                // notie.alert({ type: 'error', text: 'Algo salió mal al enviar el correo.', time: 3, position: 'bottom' });
+                toastr.error('Algo salió mal al enviar el correo.');
 
+            });
+
+    } else {
+        // toastr.error('Ingrese los datos completos en el formulario.');
+        toastr.warning('Por favor, Complete todos los campos del formulario.');
+    }
     
 });
 

@@ -31,6 +31,7 @@ app.use(express.static(path.join(__dirname)));
 
 // Ruta de ejemplo que redirige a otra URL en la misma aplicación
 app.get('/old-route', (req, res) => {
+    
     res.redirect('/new-route');
 });
 
@@ -81,7 +82,6 @@ app.post("/api/send-mail", async (req, res) => {
 //         }
 
         let info = await transporter.sendMail(msg);
-
         console.log("Message sent: ", info.messageId);
 
         // res.status(200).send('data enviada al correo tiagoddd279@gmail.com desde anonymusss279@gmail.com como Domoluz. Email:', email)
@@ -94,6 +94,10 @@ app.post("/api/send-mail", async (req, res) => {
 
     } catch (error) {
         console.log(error);
+        res.status(500).json({
+            message: "No Send Email",
+            status: false
+        })
     }
 
 

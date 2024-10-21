@@ -12,10 +12,36 @@
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+    /* override styles here */
+    .notie-container {
+      box-shadow: none;
+    }
+
+    div#toast-container {
+      width: min-content;
+    }
+
+    div > div.toast-message{
+      font-size: 17px;
+      padding-left: 18px;
+      padding-bottom: 2px;
+    }
+
+    div#toast-container > div{
+      min-width: 30em;
+      width: auto;
+      opacity: .92;
+    }
+    
   </style>
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="./../src/assets/fotos/yo/tiago-ico-redonded.jpg" type="image/jpeg" />
+
+  <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css"> -->
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> -->
+  <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">
 </head>
 
 <body>
@@ -320,12 +346,13 @@
             <div class="name-email">
               <div class="input-group">
                 <label>Nombre completo</label>
-                <input type="text" placeholder="John Doe" class="input" id="contact-name" />
+                <!-- <input type="text" placeholder="John Doe" class="input" id="contact-name" /> -->
+                <input type="text" placeholder="anonymous" class="input" id="contact-name" />
               </div>
   
               <div class="input-group">
                 <label>Correo electrónico</label>
-                <input type="email" placeholder="anonymous@gmail.com" id="contact-mail"/>
+                <input type="email" placeholder="anonymous@mail.com" id="contact-mail"/>
               </div>
             </div>
 
@@ -363,6 +390,10 @@
   </div>
 
   <script src="https://kit.fontawesome.com/458f84731a.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://unpkg.com/notie"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="node_modules/toastr/build/toastr.min.js"></script>
   <script src="script.js"></script>
 </body>
 
