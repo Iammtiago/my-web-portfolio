@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Servir archivos estáticos desde la carpeta raíz y "src"
 app.use('/src', express.static(path.join(__dirname, 'src')));
 app.use('/assets', express.static(path.join(__dirname, 'src', 'assets')));
+// app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname)));
 
 // Ruta de ejemplo que redirige a otra URL en la misma aplicación
