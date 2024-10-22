@@ -47,27 +47,49 @@ app.use(helmet());
 //     },
 // }));
 
-// Ruta de ejemplo que redirige a otra URL en la misma aplicación
-app.get('/old-route', (req, res) => {
-
-    res.redirect('/new-route');
-});
-
-// Nueva ruta a la que se redirige
-app.get('/new-route', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// app.get('/api/sendmail', (req, res) => {
-//     res.json({message: "ok"})
-// });
+//* cosas irrelevantes
+app.get('/old-route', (req, res) => {
+    res.redirect('/new-route');
+});
+
+app.get('/new-route', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/google', (req, res) => {
+    res.redirect('http://google.com');
+});
+
+app.get('/kbrn', (req, res) => {
+    res.status(200).send("what's up, nigga!?")
+});
+
+//! cosas serias
+app.get('/api/download/cv/:language', (req, res) => {
+    try {
+        const language = req.params.language;
+        const pathCV = path.join(__dirname, "src", "cv", `cv2-${language}.pdf`);
+        console.log(pathCV);
+        // res.sendStatus(204)
+        res.status(200).download(pathCV, `santiago corredor - CV ${language}.pdf`, (err) => {
+            if (err) console.error("\nERROR", err);
+            else console.log("\nDescargado correctamente");
+        })
+
+    } catch (error) {
+        console.error("\nERROR: ", error);
+        res.status(500).json({
+            status: "error",
+            message: "Tuvimos un error inesperado"
+        })
+    }
+});
 
 app.post("/api/send-mail", async (req, res) => {
-
     try {
         const { mail, name, message } = req.body
         console.log("desde el backend", mail);
@@ -117,12 +139,6 @@ app.post("/api/send-mail", async (req, res) => {
             status: false
         })
     }
-
-
-});
-
-app.get('/kbrn', (req, res) => {
-    res.status(200).send("what's up, nigga!?")
 });
 
 app.listen(port, () => {

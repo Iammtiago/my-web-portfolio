@@ -386,38 +386,27 @@ document.getElementById("icon-menu").addEventListener('click', (e) => {
     );
 })
 
-const arrowCuboQr = document.getElementById('arrow');
-const iconWpp = document.getElementById('iconWpp');
 const cuboQr = document.querySelector('.contact');
 
-arrowCuboQr.addEventListener('click', function (e) {
+document.getElementById('arrow').addEventListener('click', function (e) {
     e.preventDefault()
 
     cuboQr.classList.toggle("open");
 });
 
-iconWpp.addEventListener('click', function (e) {
+document.getElementById('iconWpp').addEventListener('click', function (e) {
     e.preventDefault()
-
     cuboQr.classList.add("open");
 });
 
-const buttonsCV = document.querySelectorAll('.cv');
-buttonsCV.forEach(element => {
+function getCvUrl(path) {
+    return `${window.location.origin}/api/download/cv/${path}`;
+}
+
+document.querySelectorAll('.cv').forEach(element => {
     element.addEventListener('click', function (e) {
-        e.preventDefault()
-
-        var ancla = document.createElement("a");
-        ancla.download = "Santiago Rodriguez CV"
-
-        if (e.target.parentNode.classList.value.includes("spanish")) {
-            ancla.href = "./src/cv/Santiago Rodriguez curriculum spanish.pdf"
-        } else {
-            ancla.href = "./src/cv/Santiago Rodriguez curriculum english.pdf"
-        }
-
-        ancla.target = "_blank";
-
-        ancla.click();
+        const language = e.currentTarget.getAttribute("data-language");
+        window.open(getCvUrl(language), "_blank", "noopener,noreferrer");
+        window.focus();
     });
 });
