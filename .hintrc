@@ -12,7 +12,17 @@
         ".*\\.js": "application/javascript; charset=utf-8"
       }
     ],
-    "no-disallowed-headers": "error",
+    "no-disallowed-headers": [
+      "warning",
+      {
+        "ignore": [
+          "Server"
+        ],
+        "include": [
+          "Custom-Header"
+        ]
+      }
+    ],
     "axe/structure": "off"
   },
   "browserslist": [

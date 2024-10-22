@@ -6,6 +6,11 @@
 }
 
 :root {
+  --ghost: #f9f9ff;
+  --ghost-transparent-light: #f9f9ff27;
+  --ghost-transparent-mid: #f9f9ff72;
+  --ghost-transparent-dark: #f9f9ffd2;
+
   --blue-chill-50: #f2f9f9;
   --blue-chill-100: #ddeff0;
   --blue-chill-200: #bfe0e2;
@@ -32,7 +37,7 @@
   --matisse-transparent-dark-900: #07304ad2;
   --matisse-transparent-dark-950: #032030d2;
 
-  --matisse-transparent-light-0: #f0f9ff99;
+  --matisse-transparent-light-0: #f0f9ff97;
   --matisse-transparent-light-10: #effaff36;
   --matisse-transparent-light-50: #b7eaff36;
   --matisse-transparent-light-100: #b9e7fe36;
@@ -233,17 +238,17 @@ i {
   height: 65px;
   width: 100%;
   padding-inline: 5%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   /* background-color: #0f172abf; */
   /* background-image: linear-gradient(180deg, #031b28fe 21%, #032030fe 79%); */
   background-image: linear-gradient(180deg, #031b28cf 21%, #032030cf 79%);
   background-repeat: no-repeat;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
+  border-color:#f9f9ff27;
+  transition: border 0.3s ease-in-out;
 
   & #title-name {
     & a {
@@ -398,17 +403,24 @@ span.skewed-word {
         }
 
         & p {
-          width: 72%;
+          width: 70%;
           font-size: 20px;
         }
 
         & .buttons {
           width: 70%;
-          padding-top: 27px;
+          padding: 40px 0 27px 0;
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 16px;
+          
+          
+          
+          
+          
+          
+          
 
           button.btn-dark {
             appearance: none;
@@ -483,7 +495,12 @@ span.skewed-word {
         justify-content: center;
         column-gap: 18px;
         margin-bottom: 27px;
+        margin-top: 18px;
         margin-right: calc(100vw * 0.05);
+        
+        
+        
+        
 
         & .download-button {
           position: relative;
@@ -695,11 +712,11 @@ span.skewed-word {
         }
 
         & .img-container {
-          & a {
+          & div {
             padding: 0;
             margin-bottom: -3px;
             cursor: pointer;
-
+            
             & img {
               background-position: 50%;
               background-repeat: no-repeat;
@@ -708,7 +725,7 @@ span.skewed-word {
               width: 100%;
               -webkit-transition: transform 0.5s ease-in-out;
               transition: transform 0.5s ease-in-out;
-
+              
               &:hover {
                 transform: scale(1.02) translateY(-0.3rem);
               }
@@ -781,17 +798,16 @@ span.skewed-word {
                 /* background-color: var(--matisse-transparent-light-200); */
                 background-color: var(--matisse-transparent-dark-0);
                 color: var(--matisse-900);
-
                 border: 1.27px solid var(--matisse-900);
                 border-radius: 7.9px;
-
                 padding: 0.5rem 0.9rem 0.5rem;
-
                 font-size: 14px;
-
                 transition: all 0.32s ease-in-out;
-
                 z-index: 23;
+                
+                
+                
+                
 
                 & i {
                   font-size: 16px;
@@ -867,6 +883,10 @@ span.skewed-word {
               bottom: 0;
               /* transition: background-color 0.25s ease-in-out; */
               transition: all 0.3s ease-in-out;
+              
+              
+              
+              
 
               &:hover {
                 bottom: 3px;
@@ -1235,9 +1255,9 @@ section#social {
     & div.form-container {
       width: 100%;
       margin: auto;
-      padding: 36px 0;
+      padding: 12px 0 36px;
       flex: 2 1 auto;
-
+      
       & div.form-wrapper {
         display: flex;
         flex-direction: column;
@@ -1254,7 +1274,7 @@ section#social {
           font-size: 36px;
           font-weight: 500;
           color: var(--blue-chill-100);
-          margin-bottom: 18px;
+          margin-bottom: 7px;
         }
 
         & form.form-contact {
@@ -1331,12 +1351,14 @@ section#social {
             font-weight: 500;
             text-transform: capitalize;
             color: white;
-            /* background-color: var(--matisse-transparent-light-900); */
-            background-color: var(--matisse-transparent-light-500);
-            border: 2px solid var(--matisse-transparent-light-50);
+            /* background-color: var(--matisse-transparent-light-50); */
+            /* background-color: #f8fafc18; */
+            background-color: #ecfeff18;
+            /* border: 2px solid var(--matisse-transparent-light-0); */
+            border: 2px solid var(--ghost-transparent-mid) ;
             border-radius: 12px;
             transition: all 0.3s ease-in-out;
-
+            
             &:hover {
               background-color: var(--matisse-transparent-light-300);
               border-color: var(--matisse-transparent-dark-50);
@@ -2001,6 +2023,16 @@ div.contact {
     /* height: 25vh; */
     /* margin-bottom: 10px; */
     margin-top: 0;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     .img-photo {
       margin-top: 0;

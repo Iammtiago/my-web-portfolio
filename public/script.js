@@ -15,76 +15,30 @@ toastr.options = {
 
 function scrollToElement(e) {
     e.preventDefault();
-    const hash = e.target.hash;
-    // console.log(hash);
-    if (hash !== "#social") {
+    const element = document.querySelector(e.target.hash);
 
-        const offset = (window.innerWidth >= 700) ? 97 : 35;
-
-        const element = document.querySelector(hash);
-        let posicionY = Number(element?.getBoundingClientRect().top + window.scrollY - offset);
-        posicionY = Math.round(posicionY)
-        // console.log(posicionY);
-
-        window.scrollTo({
-            top: posicionY,
-            behavior: 'smooth'
-        });
-
-    } else {
-        const element = document.querySelector(hash);
-        let posicionY = Number(element.getBoundingClientRect().top + window.scrollY);
-        window.scrollTo({
-            top: posicionY,
-            behavior: 'smooth'
-        });
-    }
+    const offset = (window.innerWidth >= 700) ? 97 : 35;
+    let posicionY = Math.round(Number(element?.getBoundingClientRect().top + window.scrollY - offset));
+    
+    window.scrollTo({
+        top: posicionY,
+        behavior: 'smooth'
+    });       
 }
 
-var boolClick = true;
 function windowOpenBlank(elements) {
     elements.forEach(element => {
         element.addEventListener('click', function (e) {
+            e.stopImmediatePropagation();
 
-            // console.log("event:", e.target);
-            // console.log("event father:", e.target.parentNode);
-            // console.log("blank-button", e.target.parentNode.parentNode.classList.value.includes("blank-button"));
-            // console.log("event frames:", e.target.parentNode.classList.value.includes("link"));
-
-            var href = ""
-
-            if (!(e.target.parentNode.classList.value.includes("link")) && !(e.target.parentNode.classList.value.includes("desarrollo-with"))) {
-
-                if (e.target.parentNode.parentNode.classList.value.includes("blank-button")) {
-                    // console.log("target firstelement:", e.target.parentNode.parentNode.firstElementChild.href);
-                    href = e.target.parentNode.parentNode.firstElementChild.href;
-                }
-                // else {
-                // console.log("parendNode?href: ", e.target.parentNode.parentNode.parentNode.firstElementChild.href);
-                // console.log("parendNode?: ", e.target.parentNode.parentNode.parentNode.classList.value.includes("blank-button"));
-                // href = e.target.parentNode.parentNode.parentNode.firstElementChild.href;
-                // }
-            }
-
-
-            if (boolClick && !!(href)) {
-                window.open(href, "_blank")
-                boolClick = false
-            }
-
-            setTimeout(() => {
-                boolClick = true
-            }, 500);
-
-            // window.open(href, "_self");
+            const projectDataLink = e.currentTarget.getAttribute("data-link");
+            if (e.target.classList.contains("link") || e.target.parentNode.classList.contains("link")) return;
+            else window.open(projectDataLink);
         });
     });
-
-
 }
 
 function createDevelopmentStructure(frameworks) {
-
     const fragment = new DocumentFragment();
 
     for (const framework of frameworks) {
@@ -94,7 +48,7 @@ function createDevelopmentStructure(frameworks) {
         ancla.href = framework?.hrefFramework;
 
         const divImageBox = document.createElement('div');
-        divImageBox.classList.add('image-box');
+        divImageBox.classList.add('image-box', "link");
         ancla.appendChild(divImageBox);
 
         const imgLogoFramework = document.createElement('img');
@@ -123,78 +77,67 @@ function createAnclaBlank(title, href, hidden = true) {
 }
 
 function createProjectStructure({ title, href, imgSrc, altImage, details, linkRepository, frameworks }) {
-
     let divProject = document.createElement('div');
-    divProject.classList.add('project');
-    divProject.classList.add('blank-button');
-
-    divProject.appendChild(createAnclaBlank(title, href, true));
+    divProject.classList.add('project', 'blank-button');
+    divProject.setAttribute("data-link", href);
 
     let divContext = document.createElement('div');
-    divProject.appendChild(divContext);
     divContext.classList.add('context');
+    divProject.appendChild(divContext);
 
     let divImgContainer = document.createElement('div');
     divImgContainer.classList.add('img-container');
     divContext.appendChild(divImgContainer);
 
     let divInfo = document.createElement('div');
+    divInfo.classList.add('info', 'blank-button');
     divContext.appendChild(divInfo);
-    divInfo.classList.add('info');
-    divInfo.classList.add('blank-button');
 
-    let anclaImg = createAnclaBlank(title, href, false);
-    anclaImg.classList.add('link');
-    divImgContainer.appendChild(anclaImg);
+    const subDivImg = document.createElement('div');
+    divImgContainer.appendChild(subDivImg);
 
     let imgProject = document.createElement('img');
-    anclaImg.appendChild(imgProject);
     imgProject.src = imgSrc;
     imgProject.alt = altImage;
-
-
-    divInfo.appendChild(createAnclaBlank(title, href, true));
+    subDivImg.appendChild(imgProject);
 
     let divContentTitleParagraph = document.createElement('div');
     divContentTitleParagraph.classList.add("content-title-p");
     divInfo.appendChild(divContentTitleParagraph);
 
-
     let divContainerTitleCode = document.createElement('div');
-    divContentTitleParagraph.appendChild(divContainerTitleCode);
     divContainerTitleCode.classList.add('container-title-code');
+    divContentTitleParagraph.appendChild(divContainerTitleCode);
 
     let h2ProjectTitle = document.createElement('h2');
-    divContainerTitleCode.appendChild(h2ProjectTitle);
     h2ProjectTitle.classList.add("project-title");
     h2ProjectTitle.innerHTML = title;
+    divContainerTitleCode.appendChild(h2ProjectTitle);
 
     if (linkRepository != "") {
-
         let anclaCode = createAnclaBlank(title, linkRepository, false);
-        anclaCode.classList.add('ancla-code');
+        anclaCode.classList.add('ancla-code', 'link');
         divContainerTitleCode.appendChild(anclaCode);
+
         let spanCode = document.createElement('span');
         spanCode.innerHTML = 'Code'
         anclaCode.appendChild(spanCode);
 
         let iCode = document.createElement('i');
-        iCode.classList.add("fa-solid");
-        iCode.classList.add("fa-link");
+        iCode.classList.add("fa-solid", "fa-link");
         anclaCode.appendChild(iCode);
     }
 
     let pContentDetail = document.createElement('p');
-    divContentTitleParagraph.appendChild(pContentDetail);
     pContentDetail.classList.add('detail-text');
     pContentDetail.innerHTML = details;
+    divContentTitleParagraph.appendChild(pContentDetail);
 
     let divDevelopmentWith = document.createElement('div');
-    divInfo.appendChild(divDevelopmentWith);
     divDevelopmentWith.classList.add('desarrollo-with');
+    divInfo.appendChild(divDevelopmentWith);
 
-    let anclasFragmentos = createDevelopmentStructure(frameworks);
-    divDevelopmentWith.appendChild(anclasFragmentos);
+    divDevelopmentWith.appendChild(createDevelopmentStructure(frameworks));
 
     return divProject;
 }
@@ -211,10 +154,10 @@ async function fetchProject() {
         const projectCard = createProjectStructure(project);
         allProjects.appendChild(projectCard)
         console.log(project.title);
-        console.log(project);
     }
 
-    // console.log(data.projects[0]);
+    const projectsAll = document.querySelectorAll('.project');
+    windowOpenBlank(projectsAll);
 }
 
 function createSkillStructure({ name, imgSrc, altImg }) {
@@ -329,6 +272,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+document.addEventListener('scroll', function (e) {
+    const header = document.querySelector('.header-nav');
+    // border-bottom: 0.6px solid #f9f9ff27;
+    if (window.scrollY > 0) header.style.borderBottom = "0.7px solid #f9f9ff36";
+    else header.style.borderBottom = "1px solid #f9f9ff00"
+});
+
 function removeActive() {
     navbar.classList.remove("active");
     ixmark.style.display = "none";
@@ -352,16 +302,12 @@ document.body.addEventListener('click', function (event) {
     }
 });
 
-const ancla = document.querySelectorAll('.ancla');
-
-ancla.forEach(element => {
+document.querySelectorAll('.ancla').forEach(element => {
     element.addEventListener('click', scrollToElement);
 })
 
-const divButtonAll = document.querySelectorAll('.blank-button');
-const projectsAll = document.querySelectorAll('.project');
-windowOpenBlank(divButtonAll);
-windowOpenBlank(projectsAll);
+// const divButtonAll = document.querySelectorAll('.blank-button');
+// windowOpenBlank(divButtonAll);
 
 const aboutme = document.getElementById('sobremi');
 const header = document.querySelector('.header-nav');
