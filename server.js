@@ -2,6 +2,7 @@ const express = require('express');
 const nodemailer = require("nodemailer");
 const cors = require('cors');
 const path = require('path');
+const helmet = require('helmet');
 const app = express();
 const port = process.env.PORT || 3005;
 
@@ -30,9 +31,25 @@ app.use('/assets', express.static(path.join(__dirname, 'src', 'assets')));
 // app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname)));
 
+
+app.use(helmet());
+
+// Añadir manualmente el encabezado 'X-Content-Type-Options'
+// app.use(helmet({
+//     contentSecurityPolicy: {
+//         directives: {
+//             defaultSrc: ["'self'"], // Fuente predeterminada: tu propio dominio
+//             scriptSrc: ["'self'"],
+//             // frameAncestors: ["'none'"], // Evita que tu sitio se pueda embeder en iframes
+//             // Puedes permitir ciertos dominios si es necesario:
+//             frameAncestors: ["'self'", "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"]
+//         }
+//     },
+// }));
+
 // Ruta de ejemplo que redirige a otra URL en la misma aplicación
 app.get('/old-route', (req, res) => {
-    
+
     res.redirect('/new-route');
 });
 
@@ -73,14 +90,14 @@ app.post("/api/send-mail", async (req, res) => {
             mensaje: ${message}`
         }
 
-//         let msg = {
-//             from: 'Santiago Corredor <anonymusss279@gmail.com>', // sender address
-//             to: email,
-//             subject: `¡Gracias por contactarme!`, // Subject line
-//             text: `Me gustaría conocer más sobre su contacto y cómo podria ayudarlo.
-// Puede contactarnos via whatsApp a traves del numero '${numberPhone}' para programar una pronta reunion.
-// Espero tener la oportunidad de colaborar con usted.`
-//         }
+        //         let msg = {
+        //             from: 'Santiago Corredor <anonymusss279@gmail.com>', // sender address
+        //             to: email,
+        //             subject: `¡Gracias por contactarme!`, // Subject line
+        //             text: `Me gustaría conocer más sobre su contacto y cómo podria ayudarlo.
+        // Puede contactarnos via whatsApp a traves del numero '${numberPhone}' para programar una pronta reunion.
+        // Espero tener la oportunidad de colaborar con usted.`
+        //         }
 
         let info = await transporter.sendMail(msg);
         console.log("Message sent: ", info.messageId);

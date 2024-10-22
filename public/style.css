@@ -159,7 +159,7 @@ p {
   font-size: 18px;
   /* line-height: 1.2; */
   line-height: 120%;
-  text-wrap: pretty;
+  /* text-wrap: pretty; */
   color: var(--matisse-10);
 }
 
@@ -212,7 +212,7 @@ i {
   & h1 {
     font-weight: 500;
     font-size: 32px;
-    text-wrap: pretty;
+    /* text-wrap: pretty; */
   }
 
   /* & i {
@@ -242,6 +242,7 @@ i {
   /* background-image: linear-gradient(180deg, #031b28fe 21%, #032030fe 79%); */
   background-image: linear-gradient(180deg, #031b28cf 21%, #032030cf 79%);
   background-repeat: no-repeat;
+  -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
 
   & #title-name {
@@ -964,8 +965,8 @@ span.skewed-word {
         width: 100%;
         padding: 27px 18px 35px;
         margin: auto;
+        -webkit-user-select: none;
         user-select: none;
-
         & li {
           display: flex;
           flex-direction: column;
@@ -1024,7 +1025,6 @@ span.skewed-word {
       display: flex;
       justify-content: center;
       text-align: center;
-      text-wrap: pretty;
       word-spacing: normal;
       letter-spacing: 0.4px;
       font-style: italic;
@@ -1034,7 +1034,7 @@ span.skewed-word {
       /* margin: 30px 0 50px; */
       margin: 54px 27px 36px;
       width: 70%;
-
+      
       & span {
         display: contents;
         color: var(--matisse-300);
@@ -1063,7 +1063,6 @@ span.skewed-word {
       width: 60%;
 
       text-align: justify;
-      text-wrap: pretty;
 
       & span.skewed-word {
         font-style: italic;
@@ -1160,7 +1159,7 @@ section#social {
 
         & a {
           cursor: pointer;
-          .Btn {
+          .btn-social {
             width: 45px;
             height: 45px;
             display: flex;
@@ -1182,6 +1181,7 @@ section#social {
             align-items: center;
             justify-content: center;
             background-color: transparent;
+            -webkit-backdrop-filter: blur(0px);
             backdrop-filter: blur(0px);
             letter-spacing: 0.8px;
             border-radius: 10px;
@@ -1214,13 +1214,14 @@ section#social {
             /* background: #075e54; */
           }
 
-          .btn:hover .BG {
+          .btn-social:hover .BG {
             transform: rotate(27deg);
             transform-origin: bottom;
           }
 
-          .btn:hover .svgContainer {
+          .btn-social:hover .svgContainer {
             background-color: rgba(156, 156, 156, 0.466);
+            -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
           }
         }
@@ -1349,7 +1350,6 @@ section#social {
         }
       }
     }
-    
   }
 }
 
@@ -1483,6 +1483,7 @@ div.contact {
   height: 120px;
   background-image: linear-gradient(180deg, #031b289e 18%, #0320309e 72%);
   background-repeat: no-repeat;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4),
     0 8px 10px -6px rgb(0 0 0 / 0.3);
@@ -1547,7 +1548,7 @@ div.contact {
         cursor: pointer;
       }
 
-      .Btn {
+      .btn-social {
         width: 45px;
         height: 45px;
         display: flex;
@@ -1568,6 +1569,7 @@ div.contact {
         align-items: center;
         justify-content: center;
         background-color: transparent;
+        -webkit-backdrop-filter: blur(0px);
         backdrop-filter: blur(0px);
         letter-spacing: 0.8px;
         border-radius: 10px;
@@ -1587,13 +1589,14 @@ div.contact {
         transition: all 0.3s;
       }
 
-      .Btn:hover .BG {
+      .btn-social:hover .BG {
         transform: rotate(24deg);
         transform-origin: bottom;
       }
 
-      .Btn:hover .svgContainer {
+      .btn-social:hover .svgContainer {
         background-color: rgba(156, 156, 156, 0.466);
+        -webkit-backdrop-filter: blur(4px);
         backdrop-filter: blur(4px);
       }
     }
@@ -1914,7 +1917,6 @@ div.contact {
 @media (max-width: 768px) {
   p {
     font-size: 23px;
-    text-wrap: pretty;
     font-weight: 400;
     /* text-indent: 15px; */
     /* text-indent: 35px; */
@@ -1934,6 +1936,7 @@ div.contact {
       height: 100vh;
       background-color: var(--matisse-transparent-dark-950);
       /* background-color: #032030b2; */
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
       top: 60px;
       right: -100%;
@@ -1973,6 +1976,7 @@ div.contact {
   }
 
   nav#navbar-desktop.active {
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     right: 0;
   }
@@ -2115,16 +2119,16 @@ div.contact {
           display: flex;
           flex-wrap: nowrap;
           justify-content: flex-start;
-
           position: relative;
           flex-direction: row;
-          scrollbar-width: none;
+          /* scrollbar-width: none; */
           scroll-snap-type: x mandatory;
           scroll-padding: 27px 18px 9px;
           overflow-x: auto;
           /* overscroll-behavior-x: contain; */
           scroll-behavior: smooth;
           touch-action: pan-x;
+          
 
           &::-webkit-scrollbar {
             display: none;
@@ -2146,7 +2150,7 @@ div.contact {
             }
 
             & span {
-              word-break: auto-phrase;
+              word-break: break-all;
               font-size: 18px;
               word-spacing: 1px;
               letter-spacing: 0.2px;

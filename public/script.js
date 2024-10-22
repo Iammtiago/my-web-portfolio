@@ -112,11 +112,12 @@ function createDevelopmentStructure(frameworks) {
     return fragment;
 }
 
-function createAnclaBlank(href, hidden = true) {
+function createAnclaBlank(title, href, hidden = true) {
     let ancla = document.createElement('a');
     ancla.href = href;
     ancla.target = '_blank';
     ancla.hidden = hidden;
+    ancla.title = title;
 
     return ancla
 }
@@ -127,7 +128,7 @@ function createProjectStructure({ title, href, imgSrc, altImage, details, linkRe
     divProject.classList.add('project');
     divProject.classList.add('blank-button');
 
-    divProject.appendChild(createAnclaBlank(href, true));
+    divProject.appendChild(createAnclaBlank(title, href, true));
 
     let divContext = document.createElement('div');
     divProject.appendChild(divContext);
@@ -142,7 +143,7 @@ function createProjectStructure({ title, href, imgSrc, altImage, details, linkRe
     divInfo.classList.add('info');
     divInfo.classList.add('blank-button');
 
-    let anclaImg = createAnclaBlank(href, false);
+    let anclaImg = createAnclaBlank(title, href, false);
     anclaImg.classList.add('link');
     divImgContainer.appendChild(anclaImg);
 
@@ -152,7 +153,7 @@ function createProjectStructure({ title, href, imgSrc, altImage, details, linkRe
     imgProject.alt = altImage;
 
 
-    divInfo.appendChild(createAnclaBlank(href, true));
+    divInfo.appendChild(createAnclaBlank(title, href, true));
 
     let divContentTitleParagraph = document.createElement('div');
     divContentTitleParagraph.classList.add("content-title-p");
@@ -170,7 +171,7 @@ function createProjectStructure({ title, href, imgSrc, altImage, details, linkRe
 
     if (linkRepository != "") {
 
-        let anclaCode = createAnclaBlank(linkRepository, false);
+        let anclaCode = createAnclaBlank(title, linkRepository, false);
         anclaCode.classList.add('ancla-code');
         divContainerTitleCode.appendChild(anclaCode);
         let spanCode = document.createElement('span');

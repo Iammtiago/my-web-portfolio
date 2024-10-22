@@ -5,6 +5,14 @@
   "hints": {
     "disown-opener": "off",
     "axe/name-role-value": "off",
+    "x-content-type-options": "error",
+    "http-cache": "error",
+    "content-type": ["error",
+      {
+        ".*\\.js": "application/javascript; charset=utf-8"
+      }
+    ],
+    "no-disallowed-headers": "error",
     "axe/structure": "off"
   },
   "browserslist": [
