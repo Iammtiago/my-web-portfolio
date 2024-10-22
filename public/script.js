@@ -79,10 +79,11 @@ function createAnclaBlank(title, href, hidden = true) {
 function createProjectStructure({ title, href, imgSrc, altImage, details, linkRepository, frameworks }) {
     let divProject = document.createElement('div');
     divProject.classList.add('project', 'blank-button');
-    divProject.setAttribute("data-link", href);
-
+    // divProject.setAttribute("data-link", href);
+    
     let divContext = document.createElement('div');
-    divContext.classList.add('context');
+    divContext.classList.add('context-project');
+    divContext.setAttribute("data-link", href);
     divProject.appendChild(divContext);
 
     let divImgContainer = document.createElement('div');
@@ -156,7 +157,7 @@ async function fetchProject() {
         console.log(project.title);
     }
 
-    const projectsAll = document.querySelectorAll('.project');
+    const projectsAll = document.querySelectorAll('.context-project');
     windowOpenBlank(projectsAll);
 }
 

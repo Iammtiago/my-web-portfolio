@@ -656,7 +656,7 @@ span.skewed-word {
         }
       }
 
-      & .context {
+      & .context-project {
         /* background-image: linear-gradient(
           180deg,
           var(--matisse-transparent-dark-700) 51%,
@@ -1726,7 +1726,7 @@ div.contact {
       align-items: flex-start;
       & div.project {
         &:last-child {
-          & .context {
+          & .context-project {
             & .info {
               background-image: linear-gradient(
                 180deg,
@@ -1736,7 +1736,7 @@ div.contact {
             }
           }
         }
-        & .context {
+        & .context-project {
           & .info {
             background-image: linear-gradient(
               180deg,
@@ -1840,7 +1840,7 @@ div.contact {
         align-items: flex-start;
         & div.project {
           &:last-child {
-            & .context {
+            & .context-project {
               & .info {
                 background-image: linear-gradient(
                   180deg,
@@ -1851,7 +1851,7 @@ div.contact {
             }
           }
 
-          & .context {
+          & .context-project {
             & div.info {
               flex-direction: column;
               align-items: center;
@@ -2063,7 +2063,7 @@ div.contact {
   #proyectos > div.container & div.all-projects {
     & div.project {
       &:last-child {
-        & .context {
+        & .context-project {
           & .info {
             background-image: linear-gradient(
               180deg,
@@ -2074,7 +2074,7 @@ div.contact {
         }
       }
 
-      & div.context {
+      & div.context-project {
         margin-bottom: 50px;
 
         & .img-container {
