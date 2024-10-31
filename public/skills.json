@@ -31,6 +31,11 @@
             "altImg": "React: libraria de JS"
         },
         {
+            "name": "VueJS",
+            "imgSrc": "./../src/assets/logos/svg/vue-js-logo.svg",
+            "altImg": "VueJS: libraria de JS"
+        },
+        {
             "name": "NodeJS",
             "imgSrc": "./../src/assets/logos/svg/node-js-logo.svg",
             "altImg": "Node.js"
