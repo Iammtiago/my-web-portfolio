@@ -10,12 +10,32 @@
             "frameworks": [
                 {
                     "nameFramework": "WordPress",
-                    "imgSrcFramework": "/src/assets/logos/png/wordpress-logo.png",
+                    "imgSrcFramework": "/src/assets/logos/svg/wordpress-logo.svg",
                     "hrefFramework": "https://wordpress.org/"
                 },
                 {
                     "nameFramework": "PHP",
-                    "imgSrcFramework": "/src/assets/logos/png/PHP-logo.png",
+                    "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
+                    "hrefFramework": "https://www.php.net/"
+                }
+            ]
+        },
+        {
+            "title": "BitNova",
+            "href": "http://bitnova.42web.io/",
+            "imgSrc": "/src/assets/images/pages-cap/bitnova.png",
+            "altImage": "BitNova ",
+            "linkRepository": "",
+            "details": "Esta es una página de una empresa que desarrolla software para empresas creada con Wordpress.",
+            "frameworks": [
+                {
+                    "nameFramework": "WordPress",
+                    "imgSrcFramework": "/src/assets/logos/svg/wordpress-logo.svg",
+                    "hrefFramework": "https://wordpress.org/"
+                },
+                {
+                    "nameFramework": "PHP",
+                    "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
                     "hrefFramework": "https://www.php.net/"
                 }
             ]
@@ -37,6 +57,31 @@
                     "nameFramework": "Tailwind",
                     "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
                     "hrefFramework": "https://tailwindcss.com/"
+                }
+            ]
+        },
+        {
+            "title": "galaxy-global",
+            "href": "https://galaxy-global.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/galaxy-global.png",
+            "altImage": "Pagina web Galaxy Global",
+            "linkRepository": "https://github.com/SantiiMorales/GalaxyGlobal",
+            "details": "Esta es una página sobre noticias sobre el espacio exterior",
+            "frameworks": [
+                {
+                    "nameFramework": "HTML5",
+                    "imgSrcFramework": "/src/assets/logos/svg/html-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/HTML"
+                },
+                {
+                    "nameFramework": "CSS3",
+                    "imgSrcFramework": "/src/assets/logos/svg/css-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/CSS"
+                },
+                {
+                    "nameFramework": "JavaScript",
+                    "imgSrcFramework": "/src/assets/logos/svg/js-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/JavaScript"
                 }
             ]
         },
