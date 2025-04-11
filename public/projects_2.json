@@ -21,22 +21,27 @@
             ]
         },
         {
-            "title": "BitNova",
-            "href": "http://bitnova.42web.io/",
-            "imgSrc": "/src/assets/images/pages-cap/bitnova.png",
-            "altImage": "BitNova",
-            "linkRepository": "",
-            "details": "Esta es una página de una empresa que desarrolla software para empresas creada con Wordpress.",
+            "title": "Aladino Company",
+            "href": "https://aladino-company.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/aladino-company.png",
+            "altImage": "aladino-company",
+            "linkRepository": "https://github.com/Iammtiago/aladino-company",
+            "details": "Desarrollo de una Landing page para empresa",
             "frameworks": [
                 {
-                    "nameFramework": "WordPress",
-                    "imgSrcFramework": "/src/assets/logos/svg/wordpress-logo.svg",
-                    "hrefFramework": "https://wordpress.org/"
+                    "nameFramework": "HTML5",
+                    "imgSrcFramework": "/src/assets/logos/svg/html-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/HTML"
                 },
                 {
-                    "nameFramework": "PHP",
-                    "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
-                    "hrefFramework": "https://www.php.net/"
+                    "nameFramework": "CSS3",
+                    "imgSrcFramework": "/src/assets/logos/svg/css-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/CSS"
+                },
+                {
+                    "nameFramework": "JavaScript",
+                    "imgSrcFramework": "/src/assets/logos/svg/js-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/JavaScript"
                 }
             ]
         },
@@ -57,6 +62,26 @@
                     "nameFramework": "Tailwind",
                     "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
                     "hrefFramework": "https://tailwindcss.com/"
+                }
+            ]
+        },
+        {
+            "title": "BitNova",
+            "href": "http://bitnova.42web.io/",
+            "imgSrc": "/src/assets/images/pages-cap/bitnova.png",
+            "altImage": "BitNova",
+            "linkRepository": "",
+            "details": "Esta es una página de una empresa que desarrolla software para empresas creada con Wordpress.",
+            "frameworks": [
+                {
+                    "nameFramework": "WordPress",
+                    "imgSrcFramework": "/src/assets/logos/svg/wordpress-logo.svg",
+                    "hrefFramework": "https://wordpress.org/"
+                },
+                {
+                    "nameFramework": "PHP",
+                    "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
+                    "hrefFramework": "https://www.php.net/"
                 }
             ]
         },

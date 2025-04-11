@@ -51,6 +51,11 @@
             "altImg": "Lenguaje Python"
         },
         {
+            "name": "Java",
+            "imgSrc": "./../src/assets/logos/svg/java.svg",
+            "altImg": "Java"
+        },
+        {
             "name": "Dart",
             "imgSrc": "./../src/assets/logos/svg/dart-logo.svg",
             "altImg": "Lenguaje Dart"
@@ -59,6 +64,16 @@
             "name": "C",
             "imgSrc": "./../src/assets/logos/svg/c-logo.svg",
             "altImg": "Lenguaje C"
+        },
+        {
+            "name": "C++",
+            "imgSrc": "./../src/assets/logos/svg/c-plusplus.svg",
+            "altImg": "Lenguaje C++"
+        },
+        {
+            "name": "C#",
+            "imgSrc": "./../src/assets/logos/svg/csharp.svg",
+            "altImg": "Lenguaje C#"
         },
         {
             "name": "Git",

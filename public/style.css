@@ -111,14 +111,18 @@ html {
 
 body {
   background-image: linear-gradient(
-    179deg,
-    var(--matisse-950) 3%,
-    var(--matisse-900) 27%,
-    var(--matisse-800) 46%,
-    var(--matisse-700) 72%,
-    var(--matisse-transparent-dark-700) 97%
-  );
-
+      179deg,
+      var(--matisse-950) 3%,
+      var(--matisse-900) 27%,
+      var(--matisse-800) 46%,
+      var(--matisse-700) 72%,
+      var(--matisse-transparent-dark-700) 97%
+    ),
+    radial-gradient(
+      circle at 100%, 
+      var(--matisse-950) 46%, 
+      #333 90% 
+    );
   background-repeat: no-repeat;
   font-family: "Outfit", sans-serif;
   color: var(--matisse-0);
@@ -247,7 +251,7 @@ i {
   background-repeat: no-repeat;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
-  border-color:#f9f9ff27;
+  border-color: #f9f9ff27;
   transition: border 0.3s ease-in-out;
 
   & #title-name {
@@ -414,13 +418,6 @@ span.skewed-word {
           justify-content: center;
           align-items: center;
           gap: 16px;
-          
-          
-          
-          
-          
-          
-          
 
           button.btn-dark {
             appearance: none;
@@ -497,10 +494,6 @@ span.skewed-word {
         margin-bottom: 27px;
         margin-top: 18px;
         margin-right: calc(100vw * 0.05);
-        
-        
-        
-        
 
         & .download-button {
           position: relative;
@@ -716,7 +709,7 @@ span.skewed-word {
             padding: 0;
             margin-bottom: -3px;
             cursor: pointer;
-            
+
             & img {
               background-position: 50%;
               background-repeat: no-repeat;
@@ -725,7 +718,7 @@ span.skewed-word {
               width: 100%;
               -webkit-transition: transform 0.5s ease-in-out;
               transition: transform 0.5s ease-in-out;
-              
+
               &:hover {
                 transform: scale(1.02) translateY(-0.3rem);
               }
@@ -804,10 +797,6 @@ span.skewed-word {
                 font-size: 14px;
                 transition: all 0.32s ease-in-out;
                 z-index: 23;
-                
-                
-                
-                
 
                 & i {
                   font-size: 16px;
@@ -883,10 +872,6 @@ span.skewed-word {
               bottom: 0;
               /* transition: background-color 0.25s ease-in-out; */
               transition: all 0.3s ease-in-out;
-              
-              
-              
-              
 
               &:hover {
                 bottom: 3px;
@@ -1054,7 +1039,7 @@ span.skewed-word {
       /* margin: 30px 0 50px; */
       margin: 54px 27px 36px;
       width: 70%;
-      
+
       & span {
         display: contents;
         color: var(--matisse-300);
@@ -1257,7 +1242,7 @@ section#social {
       margin: auto;
       padding: 12px 0 36px;
       flex: 2 1 auto;
-      
+
       & div.form-wrapper {
         display: flex;
         flex-direction: column;
@@ -1355,10 +1340,10 @@ section#social {
             /* background-color: #f8fafc18; */
             background-color: #ecfeff18;
             /* border: 2px solid var(--matisse-transparent-light-0); */
-            border: 2px solid var(--ghost-transparent-mid) ;
+            border: 2px solid var(--ghost-transparent-mid);
             border-radius: 12px;
             transition: all 0.3s ease-in-out;
-            
+
             &:hover {
               background-color: var(--matisse-transparent-light-300);
               border-color: var(--matisse-transparent-dark-50);
@@ -2023,16 +2008,6 @@ div.contact {
     /* height: 25vh; */
     /* margin-bottom: 10px; */
     margin-top: 0;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     .img-photo {
       margin-top: 0;
@@ -2160,7 +2135,6 @@ div.contact {
           /* overscroll-behavior-x: contain; */
           scroll-behavior: smooth;
           touch-action: pan-x;
-          
 
           &::-webkit-scrollbar {
             display: none;
