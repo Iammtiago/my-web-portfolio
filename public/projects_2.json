@@ -1,6 +1,26 @@
 {
     "projects": [
         {
+            "title": "DomoLuz",
+            "href": "https://domoluz.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/domoluz.png",
+            "altImage": "DomoLuz",
+            "linkRepository": "https://github.com/Iammtiago/react-landing-page",
+            "details": "Esta es una página sobre Domotica y iluminacion creada con ReactJS.",
+            "frameworks": [
+                {
+                    "nameFramework": "ReactJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/react-js-logo.svg",
+                    "hrefFramework": "https://react.dev/"
+                },
+                {
+                    "nameFramework": "Tailwind",
+                    "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
+                    "hrefFramework": "https://tailwindcss.com/"
+                }
+            ]
+        },
+        {
             "title": "AVIVA C.A.",
             "href": "https://aviva.com.ve",
             "imgSrc": "/src/assets/images/pages-cap/aviva.png",
@@ -17,6 +37,26 @@
                     "nameFramework": "PHP",
                     "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
                     "hrefFramework": "https://www.php.net/"
+                }
+            ]
+        },
+        {
+            "title": "Ready Go",
+            "href": "https://ready-go-template.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/ready-go.png",
+            "altImage": "Ready Go",
+            "linkRepository": "https://github.com/Iammtiago/ready-go-template",
+            "details": "Esta es una página de una empresa que desarrolla software para empresas creada con ReactJS.",
+            "frameworks": [
+                {
+                    "nameFramework": "ReactJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/react-js-logo.svg",
+                    "hrefFramework": "https://react.dev/"
+                },
+                {
+                    "nameFramework": "Tailwind",
+                    "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
+                    "hrefFramework": "https://tailwindcss.com/"
                 }
             ]
         },
@@ -66,26 +106,6 @@
             ]
         },
         {
-            "title": "BitNova",
-            "href": "http://bitnova.42web.io/",
-            "imgSrc": "/src/assets/images/pages-cap/bitnova.png",
-            "altImage": "BitNova",
-            "linkRepository": "",
-            "details": "Esta es una página de una empresa que desarrolla software para empresas creada con Wordpress.",
-            "frameworks": [
-                {
-                    "nameFramework": "WordPress",
-                    "imgSrcFramework": "/src/assets/logos/svg/wordpress-logo.svg",
-                    "hrefFramework": "https://wordpress.org/"
-                },
-                {
-                    "nameFramework": "PHP",
-                    "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
-                    "hrefFramework": "https://www.php.net/"
-                }
-            ]
-        },
-        {
             "title": "Galaxy Global",
             "href": "https://galaxy-global.vercel.app/",
             "imgSrc": "/src/assets/images/pages-cap/galaxy-global.png",
@@ -107,26 +127,6 @@
                     "nameFramework": "JavaScript",
                     "imgSrcFramework": "/src/assets/logos/svg/js-logo.svg",
                     "hrefFramework": "https://en.wikipedia.org/wiki/JavaScript"
-                }
-            ]
-        },
-        {
-            "title": "Ready Go",
-            "href": "https://ready-go-template.vercel.app/",
-            "imgSrc": "/src/assets/images/pages-cap/ready-go.png",
-            "altImage": "Ready Go",
-            "linkRepository": "https://github.com/Iammtiago/ready-go-template",
-            "details": "Esta es una página de una empresa que desarrolla software para empresas creada con ReactJS.",
-            "frameworks": [
-                {
-                    "nameFramework": "ReactJS",
-                    "imgSrcFramework": "/src/assets/logos/svg/react-js-logo.svg",
-                    "hrefFramework": "https://react.dev/"
-                },
-                {
-                    "nameFramework": "Tailwind",
-                    "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
-                    "hrefFramework": "https://tailwindcss.com/"
                 }
             ]
         },
