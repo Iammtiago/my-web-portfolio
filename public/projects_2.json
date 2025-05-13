@@ -22,10 +22,10 @@
         },
         {
             "title": "Aladino Company",
-            "href": "https://aladino-company.vercel.app/",
+            "href": "https://aladinocompany.com/",
             "imgSrc": "/src/assets/images/pages-cap/aladino-company.png",
             "altImage": "aladino-company",
-            "linkRepository": "https://github.com/Iammtiago/aladino-company",
+            "linkRepository": "",
             "details": "Desarrollo de una Landing page para empresa",
             "frameworks": [
                 {
