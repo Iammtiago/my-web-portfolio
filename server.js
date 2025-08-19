@@ -72,7 +72,7 @@ app.get('/kbrn', (req, res) => {
 app.get('/api/download/cv/:language', (req, res) => {
     try {
         const language = req.params.language;
-        const pathCV = path.join(__dirname, "src", "cv", `cv2-${language}.pdf`);
+        const pathCV = path.join(__dirname, "src", "cv", `cv-perso-${language}.pdf`);
         console.log(pathCV);
         // res.sendStatus(204)
         res.status(200).download(pathCV, `santiago corredor - CV ${language}.pdf`, (err) => {
