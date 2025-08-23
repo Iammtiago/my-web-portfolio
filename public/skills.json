@@ -31,6 +31,11 @@
             "altImg": "React: libraria de JS"
         },
         {
+            "name": "NextJS",
+            "imgSrc": "./../src/assets/logos/svg/next-js-logo.svg",
+            "altImg": "Next: libraria de JS"
+        },
+        {
             "name": "NodeJS",
             "imgSrc": "./../src/assets/logos/svg/node-js-logo.svg",
             "altImg": "Node.js"
@@ -66,24 +71,24 @@
             "altImg": "Lenguaje C"
         },
         {
-            "name": "C++",
-            "imgSrc": "./../src/assets/logos/svg/c-plusplus.svg",
-            "altImg": "Lenguaje C++"
-        },
-        {
-            "name": "C#",
-            "imgSrc": "./../src/assets/logos/svg/csharp.svg",
-            "altImg": "Lenguaje C#"
-        },
-        {
             "name": "Git",
             "imgSrc": "./../src/assets/logos/svg/git-logo.svg",
             "altImg": "Git: Sistema de control de versiones"
         },
         {
-            "name": "SQL",
-            "imgSrc": "./../src/assets/logos/svg/sql-logo.svg",
-            "altImg": "SQL: Lenguaje de consulta estructurado (Structured Query Language)"
+            "name": "AWS",
+            "imgSrc": "./../src/assets/logos/svg/aws-light.svg",
+            "altImg": "Amazon Web Services (AWS)"
+        },
+        {
+            "name": "Supabase",
+            "imgSrc": "./../src/assets/logos/svg/supabase-logo.svg",
+            "altImg": "Supabase: Plataforma de backend como servicio"
+        },
+        {
+            "name": "MongoDB",
+            "imgSrc": "./../src/assets/logos/svg/mongodb-logo.svg",
+            "altImg": "MongoDB: Base de datos NoSQL"
         },
         {
             "name": "MySQL",
@@ -95,5 +100,6 @@
             "imgSrc": "./../src/assets/logos/svg/postgresql-logo.svg",
             "altImg": "Postgresql: Sistema de gestión de bases de datos relacionales de objetos"
         }
+        
     ]
 }

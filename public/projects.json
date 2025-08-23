@@ -91,7 +91,7 @@
             "imgSrc": "/src/assets/images/pages-cap/login-signup.png",
             "altImage": "login-signUp page",
             "linkRepository": "https://github.com/Iammtiago/login_signup-page",
-            "details": "un inicio de sesión moderno y minimalista diseñado para ser utilizado en cualquier dispositivo, desde tablets hasta computadoras portátiles.",
+            "details": "Diseño y desarrollo de una interfaz de inicio de sesión minimalista. El proyecto se centra en la experiencia de usuario (UX) y la interfaz de usuario (UI), con un diseño limpio y moderno que asegura una interacción intuitiva y visualmente atractiva.",
             "frameworks": [
                 {
                     "nameFramework": "HTML5",
