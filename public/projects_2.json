@@ -6,7 +6,7 @@
             "imgSrc": "/src/assets/images/pages-cap/elite-cars.png",
             "altImage": "Elite Cars",
             "linkRepository": "",
-            "details": "Desarrollo de una plataforma de eCommerce para la venta de autos, construida con WordPress.",
+            "details": "Plataforma e-commerce desarrollada en WordPress para el sector automotriz. Permite administrar el inventario de vehículos, gestionar ventas en línea y presentar un catálogo dinámico de autos.",
             "frameworks": [
                 {
                     "nameFramework": "WordPress",
@@ -17,6 +17,41 @@
                     "nameFramework": "PHP",
                     "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
                     "hrefFramework": "https://www.php.net/"
+                }
+            ]
+        },
+        {
+            "title": "Lucinazul",
+            "href": "https://lucina-catalog.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/lucinazul.png",
+            "altImage": "Lucinazul",
+            "linkRepository": "",
+            "details": "Plataforma e-commerce con dashboard administrativo propio. Desarrollada para gestionar inventario de productos, promociones y contenido multimedia de forma intuitiva, utilizando React, Node.js, Express y MongoDB.",
+            "frameworks": [
+                {
+                    "nameFramework": "ReactJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/react-js-logo.svg",
+                    "hrefFramework": "https://react.dev/"
+                },
+                {
+                    "nameFramework": "Tailwind",
+                    "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
+                    "hrefFramework": "https://tailwindcss.com/"
+                },
+                {
+                    "nameFramework": "NodeJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/node-js-logo.svg",
+                    "hrefFramework": "https://nodejs.org/"
+                },
+                {
+                    "nameFramework": "ExpressJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/express-js-light-logo.svg",
+                    "hrefFramework": "https://expressjs.com/"
+                },
+                {
+                    "nameFramework": "MongoDB",
+                    "imgSrcFramework": "/src/assets/logos/svg/mongodb-logo.svg",
+                    "hrefFramework": "https://mongodb.com/"
                 }
             ]
         },

@@ -13,17 +13,41 @@ toastr.options = {
     preventDuplicates: true
 };
 
+const aboutme = document.getElementById("sobremi");
+const header = document.querySelector(".header-nav");
+const photo = document.getElementById("photo");
+
+const divSkills = document.querySelector("div.skills");
+
+const navbar = document.querySelector("nav#navbar-desktop");
+const ixmark = document.getElementById("i-xmark");
+ixmark.hidden = true;
+const imenu = document.getElementById("i-menu");
+
+const cuboQr = document.querySelector(".contact");
+
 function scrollToElement(e) {
     e.preventDefault();
+    removeActive();
+    console.log("Target:", e.target);
+    console.log("Hash:", e.target.hash);
     const element = document.querySelector(e.target.hash);
+    console.log("Element encontrado:", element);
+
+    if (!element) {
+      console.error("No se encontró el elemento para:", e.target.hash);
+      return;
+    }
 
     const offset = (window.innerWidth >= 700) ? 97 : 35;
     let posicionY = Math.round(Number(element?.getBoundingClientRect().top + window.scrollY - offset));
-    
-    window.scrollTo({
-        top: posicionY,
-        behavior: 'smooth'
-    });       
+    console.log("Posición Y:", posicionY);
+
+    window.scrollTo(0, posicionY);
+    // window.scrollTo({
+    //     top: posicionY,
+    //     // behavior: 'smooth'
+    // });       
 }
 
 function windowOpenBlank(elements) {
@@ -273,12 +297,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-document.addEventListener('scroll', function (e) {
-    const header = document.querySelector('.header-nav');
-    // border-bottom: 0.6px solid #f9f9ff27;
-    if (window.scrollY > 0) header.style.borderBottom = "0.7px solid #f9f9ff36";
-    else header.style.borderBottom = "1px solid #f9f9ff00"
-});
+// document.addEventListener('scroll', function (e) {
+//     const header = document.querySelector('.header-nav');
+//     // border-bottom: 0.6px solid #f9f9ff27;
+//     if (window.scrollY > 0) header.style.borderBottom = "0.7px solid #f9f9ff36";
+//     else header.style.borderBottom = "1px solid #f9f9ff00"
+// });
 
 function removeActive() {
     navbar.classList.remove("active");
@@ -288,38 +312,30 @@ function removeActive() {
     document.body.style.touchAction = "auto"
 }
 
-document.body.addEventListener('click', function (event) {
-    const container = document.querySelector('.menu');
-    const anclas = document.querySelectorAll('a.link');
-
-    anclas.forEach(a => {
-        if (a.contains(event.target)) {
-            removeActive();
-        }
-    })
-
-    if (!container.contains(event.target)) {
-        removeActive();
-    }
-});
-
 document.querySelectorAll('.ancla').forEach(element => {
-    element.addEventListener('click', scrollToElement);
+    element.addEventListener('click', (e) => {
+        e.stopPropagation();
+        scrollToElement(e);
+    });
 })
+
+document.body.addEventListener("click", function (event) {
+  const container = document.querySelector(".menu");
+  // const anclas = document.querySelectorAll('a.link');
+
+  // anclas.forEach(a => {
+  //     if (a.contains(event.target)) {
+  //         removeActive();
+  //     }
+  // })
+
+  if (!container.contains(event.target)) {
+    removeActive();
+  }
+});
 
 // const divButtonAll = document.querySelectorAll('.blank-button');
 // windowOpenBlank(divButtonAll);
-
-const aboutme = document.getElementById('sobremi');
-const header = document.querySelector('.header-nav');
-const photo = document.getElementById('photo');
-
-const divSkills = document.querySelector('div.skills');
-
-const navbar = document.querySelector('nav#navbar-desktop');
-const ixmark = document.getElementById('i-xmark');
-ixmark.hidden = true;
-const imenu = document.getElementById('i-menu');
 
 document.getElementById("icon-menu").addEventListener('click', (e) => {
     e.stopPropagation();
@@ -332,8 +348,6 @@ document.getElementById("icon-menu").addEventListener('click', (e) => {
         document.body.style.overflow = '', document.body.style.touchAction = "auto"
     );
 })
-
-const cuboQr = document.querySelector('.contact');
 
 document.getElementById('arrow').addEventListener('click', function (e) {
     e.preventDefault()
