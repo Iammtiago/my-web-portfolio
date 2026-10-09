@@ -1,22 +1,37 @@
 {
     "projects": [
         {
-            "title": "AVIVA C.A.",
-            "href": "https://aviva.com.ve",
-            "imgSrc": "/src/assets/images/pages-cap/aviva.png",
-            "altImage": " AVIVA",
+            "title": "Lucinazul",
+            "href": "https://lucina-catalog.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/lucinazul.png",
+            "altImage": "Lucinazul",
             "linkRepository": "",
-            "details": "Esta es una página de una empresa automotriz creada con Wordpress.",
+            "details": "Plataforma e-commerce con dashboard administrativo propio. Desarrollada para gestionar inventario de productos, promociones y contenido multimedia de forma intuitiva, utilizando React, Node.js, Express y MongoDB.",
             "frameworks": [
                 {
-                    "nameFramework": "WordPress",
-                    "imgSrcFramework": "/src/assets/logos/png/wordpress-logo.png",
-                    "hrefFramework": "https://wordpress.org/"
+                    "nameFramework": "ReactJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/react-js-logo.svg",
+                    "hrefFramework": "https://react.dev/"
                 },
                 {
-                    "nameFramework": "PHP",
-                    "imgSrcFramework": "/src/assets/logos/png/PHP-logo.png",
-                    "hrefFramework": "https://www.php.net/"
+                    "nameFramework": "Tailwind",
+                    "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
+                    "hrefFramework": "https://tailwindcss.com/"
+                },
+                {
+                    "nameFramework": "NodeJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/node-js-logo.svg",
+                    "hrefFramework": "https://nodejs.org/"
+                },
+                {
+                    "nameFramework": "ExpressJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/express-js-light-logo.svg",
+                    "hrefFramework": "https://expressjs.com/"
+                },
+                {
+                    "nameFramework": "MongoDB",
+                    "imgSrcFramework": "/src/assets/logos/svg/mongodb-logo.svg",
+                    "hrefFramework": "https://mongodb.com/"
                 }
             ]
         },
@@ -24,9 +39,9 @@
             "title": "DomoLuz",
             "href": "https://domoluz.vercel.app/",
             "imgSrc": "/src/assets/images/pages-cap/domoluz.png",
-            "altImage": " DomoLuz",
+            "altImage": "DomoLuz",
             "linkRepository": "https://github.com/Iammtiago/react-landing-page",
-            "details": "Esta es una página sobre Domotica y iluminacion creada con ReactJS.",
+            "details": "Desarrollo de una landing page informativa para una empresa, construida con React.",
             "frameworks": [
                 {
                     "nameFramework": "ReactJS",
@@ -41,12 +56,37 @@
             ]
         },
         {
-            "title": "ProgramaYa!",
-            "href": "https://programa-ya.vercel.app/",
-            "imgSrc": "/src/assets/images/pages-cap/programaYa.png",
-            "altImage": "programaYa! lading page",
-            "linkRepository": "https://github.com/Iammtiago/programa-ya",
-            "details": "programaYa! es una plataforma web 100% responsive design, que permite a los usuarios ver paginas con cursos gratis sobre programacion de aplicaciones moviles o desarrollo de paginas web.",
+            "title": "Notes app",
+            "href": "https://notes-app-react-omega.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/notes-app.png",
+            "altImage": "Notes app",
+            "linkRepository": "https://github.com/Iammtiago/notes-app-react",
+            "details": "Desarrollo de una aplicación web completa de notas con React, Tailwind y Supabase, incluyendo funcionalidades de gestión y una interfaz de usuario dinámica.",
+            "frameworks": [
+                {
+                    "nameFramework": "ReactJS",
+                    "imgSrcFramework": "/src/assets/logos/svg/react-js-logo.svg",
+                    "hrefFramework": "https://react.dev/"
+                },
+                {
+                    "nameFramework": "Tailwind",
+                    "imgSrcFramework": "/src/assets/logos/svg/tailwind-logo.svg",
+                    "hrefFramework": "https://tailwindcss.com/"
+                },
+                {
+                    "nameFramework": "Supabase",
+                    "imgSrcFramework": "/src/assets/logos/svg/supabase-logo.svg",
+                    "hrefFramework": "https://supabase.com/"
+                }
+            ]
+        },
+        {
+            "title": "Aladino Company",
+            "href": "https://aladinocompany.com/",
+            "imgSrc": "/src/assets/images/pages-cap/aladino-company.png",
+            "altImage": "aladino-company",
+            "linkRepository": "",
+            "details": "Desarrollo de una landing page informativa para una empresa, construida con HTML, CSS y JavaScript.",
             "frameworks": [
                 {
                     "nameFramework": "HTML5",
@@ -57,26 +97,26 @@
                     "nameFramework": "CSS3",
                     "imgSrcFramework": "/src/assets/logos/svg/css-logo.svg",
                     "hrefFramework": "https://en.wikipedia.org/wiki/CSS"
+                },
+                {
+                    "nameFramework": "JavaScript",
+                    "imgSrcFramework": "/src/assets/logos/svg/js-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/JavaScript"
                 }
             ]
         },
         {
-            "title": "Shopi",
-            "href": "https://shopi-phi.vercel.app",
-            "imgSrc": "/src/assets/images/pages-cap/shopi-vercel.png",
-            "altImage": "React E-commerce",
-            "linkRepository": "https://github.com/Iammtiago/react-shop",
-            "details": "Shopi es una plataforma E-Commerce (tienda online), permite ver, agregar, eliminar productos al carrito, permite ver con detalles el producto seleccionado, tiene para buscar un producto por categoria o/y nombre. tiene para ver todas las compras hechas, con un formato dia/mes/año. tiene un simple inicio de sesión y un registro",
+            "title": "Ready Go",
+            "href": "https://ready-go-template.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/ready-go.png",
+            "altImage": "Ready Go",
+            "linkRepository": "https://github.com/Iammtiago/ready-go-template",
+            "details": "Desarrollo de una landing page informativa para una empresa, construida con React.",
             "frameworks": [
                 {
                     "nameFramework": "ReactJS",
                     "imgSrcFramework": "/src/assets/logos/svg/react-js-logo.svg",
                     "hrefFramework": "https://react.dev/"
-                },
-                {
-                    "nameFramework": "Vite",
-                    "imgSrcFramework": "/src/assets/logos/svg/vite-js-logo.svg",
-                    "hrefFramework": "https://vitejs.dev/"
                 },
                 {
                     "nameFramework": "Tailwind",
@@ -86,12 +126,12 @@
             ]
         },
         {
-            "title": "pagina de inicio de sesión",
-            "href": "https://login-page-indol-six.vercel.app/",
-            "imgSrc": "/src/assets/images/pages-cap/login-signup.png",
-            "altImage": "login-signUp page",
-            "linkRepository": "https://github.com/Iammtiago/login_signup-page",
-            "details": "Diseño y desarrollo de una interfaz de inicio de sesión minimalista. El proyecto se centra en la experiencia de usuario (UX) y la interfaz de usuario (UI), con un diseño limpio y moderno que asegura una interacción intuitiva y visualmente atractiva.",
+            "title": "Galaxy Global",
+            "href": "https://galaxy-global.vercel.app/",
+            "imgSrc": "/src/assets/images/pages-cap/galaxy-global.png",
+            "altImage": "Pagina web Galaxy Global",
+            "linkRepository": "https://github.com/SantiiMorales/GalaxyGlobal",
+            "details": "Desarrollo de una landing page informativa sobre el espacio, construida con HTML, CSS y JavaScript.",
             "frameworks": [
                 {
                     "nameFramework": "HTML5",
@@ -102,6 +142,11 @@
                     "nameFramework": "CSS3",
                     "imgSrcFramework": "/src/assets/logos/svg/css-logo.svg",
                     "hrefFramework": "https://en.wikipedia.org/wiki/CSS"
+                },
+                {
+                    "nameFramework": "JavaScript",
+                    "imgSrcFramework": "/src/assets/logos/svg/js-logo.svg",
+                    "hrefFramework": "https://en.wikipedia.org/wiki/JavaScript"
                 }
             ]
         }
