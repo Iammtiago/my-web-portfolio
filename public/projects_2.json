@@ -1,25 +1,25 @@
 {
     "projects": [
-        {
-            "title": "Elite Cars",
-            "href": "https://elitecarsfl.com/",
-            "imgSrc": "/src/assets/images/pages-cap/elite-cars.png",
-            "altImage": "Elite Cars",
-            "linkRepository": "",
-            "details": "Plataforma e-commerce desarrollada en WordPress para el sector automotriz. Permite administrar el inventario de vehículos, gestionar ventas en línea y presentar un catálogo dinámico de autos.",
-            "frameworks": [
-                {
-                    "nameFramework": "WordPress",
-                    "imgSrcFramework": "/src/assets/logos/svg/wordpress-logo.svg",
-                    "hrefFramework": "https://wordpress.org/"
-                },
-                {
-                    "nameFramework": "PHP",
-                    "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
-                    "hrefFramework": "https://www.php.net/"
-                }
-            ]
-        },
+        // {
+        //     "title": "Elite Cars",
+        //     "href": "https://elitecarsfl.com/",
+        //     "imgSrc": "/src/assets/images/pages-cap/elite-cars.png",
+        //     "altImage": "Elite Cars",
+        //     "linkRepository": "",
+        //     "details": "Plataforma e-commerce desarrollada en WordPress para el sector automotriz. Permite administrar el inventario de vehículos, gestionar ventas en línea y presentar un catálogo dinámico de autos.",
+        //     "frameworks": [
+        //         {
+        //             "nameFramework": "WordPress",
+        //             "imgSrcFramework": "/src/assets/logos/svg/wordpress-logo.svg",
+        //             "hrefFramework": "https://wordpress.org/"
+        //         },
+        //         {
+        //             "nameFramework": "PHP",
+        //             "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
+        //             "hrefFramework": "https://www.php.net/"
+        //         }
+        //     ]
+        // },
         {
             "title": "Lucinazul",
             "href": "https://lucina-catalog.vercel.app/",
@@ -55,26 +55,26 @@
                 }
             ]
         },
-        {
-            "title": "AVIVA C.A.",
-            "href": "https://aviva.com.ve",
-            "imgSrc": "/src/assets/images/pages-cap/aviva.png",
-            "altImage": "AVIVA C.A.",
-            "linkRepository": "",
-            "details": "Desarrollo de un sitio web corporativo completo para una empresa automotriz, utilizando WordPress.",
-            "frameworks": [
-                {
-                    "nameFramework": "WordPress",
-                    "imgSrcFramework": "/src/assets/logos/svg/wordpress-logo.svg",
-                    "hrefFramework": "https://wordpress.org/"
-                },
-                {
-                    "nameFramework": "PHP",
-                    "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
-                    "hrefFramework": "https://www.php.net/"
-                }
-            ]
-        },
+        // {
+        //     "title": "AVIVA C.A.",
+        //     "href": "https://aviva.com.ve",
+        //     "imgSrc": "/src/assets/images/pages-cap/aviva.png",
+        //     "altImage": "AVIVA C.A.",
+        //     "linkRepository": "",
+        //     "details": "Desarrollo de un sitio web corporativo completo para una empresa automotriz, utilizando WordPress.",
+        //     "frameworks": [
+        //         {
+        //             "nameFramework": "WordPress",
+        //             "imgSrcFramework": "/src/assets/logos/svg/wordpress-logo.svg",
+        //             "hrefFramework": "https://wordpress.org/"
+        //         },
+        //         {
+        //             "nameFramework": "PHP",
+        //             "imgSrcFramework": "/src/assets/logos/svg/php-light-logo.svg",
+        //             "hrefFramework": "https://www.php.net/"
+        //         }
+        //     ]
+        // },
         {
             "title": "DomoLuz",
             "href": "https://domoluz.vercel.app/",
